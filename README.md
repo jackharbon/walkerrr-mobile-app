@@ -94,9 +94,9 @@
 
 #### <u>Disclaimer</u>
 
-`This app is for educational purposes only, not for commercial use.`
+`This app was created as a final Northcoders Software Developer Bootcamp team project. All Rights Reserved.`
 
-Fit-2-ger is a mobile application for the active outdoor amateur athlete who is looking for other people to exercise with. After login the user can:
+Wallkerrr is a mobile application for the active outdoor amateur athlete who is looking for other people to exercise with. After login the user can:
 
 -  register her/his own regular workouts
 -  set up prefered searched new workouts
@@ -113,7 +113,6 @@ Fit-2-ger is a mobile application for the active outdoor amateur athlete who is 
 -  [![Firebase][firebase.com]][firebase-url]
 -  [![Flutter][flutter.com]][flutter-url]
 -  [![Node.js][nodejs.org]][nodejs-url]
--  [![Socket.io][socket.io]][socket-url]
 -  [![GitHub][github.com]][github-url]
 -  [![VSC][visualstudiocode]][visualstudiocode-url]
 -  [![Slack][slack.com]][slack-url]
@@ -171,30 +170,8 @@ https://github.com/jackharbon/walkerrr-mobile-app/tree/main/fit-2-ger-backend
 -  [ ] Testing
 -  [ ] Flutter Scaffold
 -  [ ] Login/register
--  [ ] User profile
--  [ ] Favourites
--  [ ] Workouts
--  [ ] Messages
--  [ ] Settings
 
 See the [open issues](https://github.com/jackharbon/walkerrr-mobile-app/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,7 +179,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the GNU GENERAL PUBLIC LICENSE License. See <a href="https://github.com/jackharbon/walkerrr-mobile-app/blob/main/LICENSE">`LICENSE.txt` </a> for more information.
+All rights belong to [Northcoders](http://northcoders.com). See <a href="https://github.com/jackharbon/walkerrr-mobile-app/blob/main/LICENSE">`LICENSE.txt` </a> for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -220,6 +197,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 ## Acknowledgments
 
+-  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
 -  [Mongo DB](https://www.mongodb.com/)
 -  [Cyclic](https://www.cyclic.sh/)
@@ -263,8 +241,6 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 [mongodb-url]: https://mongodb.com/
 [nodejs.org]: https://img.shields.io/badge/node.js-7EBB00?style=for-the-badge&logo=nodedotjs&logoColor=313429
 [nodejs-url]: https://nodejs.org/
-[socket.io]: https://img.shields.io/badge/Socket.io-grey?style=for-the-badge&logo=socketdotio&logoColor=white
-[socket-url]: https://socket.io
 [visualstudiocode]: https://img.shields.io/badge/visualstudio-3CA4EA?style=for-the-badge&logo=visualstudio&logoColor=white
 [visualstudiocode-url]: https://code.visualstudio.com
 [slack.com]: https://img.shields.io/badge/slack-E5AC2B?style=for-the-badge&logo=slack&logoColor=D91C57
