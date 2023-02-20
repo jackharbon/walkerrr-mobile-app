@@ -30,25 +30,22 @@
 <br />
 <div align="center">
   <a href="https://github.com/jackharbon/walkerrr-mobile-app">
-    <img src="media/logo512.png" alt="Logo" width="80" height="80">
+    <img src="media/logo512.png" alt="Logo" width="200" height="200">
   </a>
 
-<h3 align="center">WALKERRR</h3>
+<h1 align="center">WALKERRR</h1>
 
   <p align="center">
     <a href="https://northcoders.com/our-courses/coding-bootcamp">Northcoders Software Developer Coding Bootcamp</a> final project, finished January 2023.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/jackharbon/walkerrr-mobile-app">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/jackharbon/walkerrr-mobile-app/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/jackharbon/walkerrr-mobile-app/issues">Request Feature</a>
   </p>
 </div>
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -56,6 +53,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#planning-the-app">Planning the app</a></li>
+        <li><a href="#description">Description</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -66,7 +65,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -74,27 +72,51 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+<br />
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="media/project_screenshots.jpg" alt="screenshots">
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+### Planning the app
+
+-  User stories
+-  RATS
+-  Spiking
+-  Tech
+-  Screens
+
+[View team presentation](https://github.com/jackharbon/walkerrr-mobile-app/blob/main/media/merge_conflict_retro.mp4)
+
+### Description
+
+#### <u>Disclaimer</u>
+
+`This app is for educational purposes only, not for commercial use.`
+
+Fit-2-ger is a mobile application for the active outdoor amateur athlete who is looking for other people to exercise with. After login the user can:
+
+-  register her/his own regular workouts
+-  set up prefered searched new workouts
+-  search and add other's workouts to favourites
+-  send a message to other users
+-  connect to other users to see their activities
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
--  [![Next][next.js]][next-url]
--  [![React][react.js]][react-url]
--  [![Vue][vue.js]][vue-url]
--  [![Angular][angular.io]][angular-url]
--  [![Svelte][svelte.dev]][svelte-url]
--  [![Laravel][laravel.com]][laravel-url]
--  [![Bootstrap][bootstrap.com]][bootstrap-url]
--  [![JQuery][jquery.com]][jquery-url]
+-  [![Figma][figma.com]][figma-url]
+-  [![Mongodb][mongodb.com]][mongodb-url]
+-  [![Firebase][firebase.com]][firebase-url]
+-  [![Flutter][flutter.com]][flutter-url]
+-  [![Node.js][nodejs.org]][nodejs-url]
+-  [![Socket.io][socket.io]][socket-url]
+-  [![GitHub][github.com]][github-url]
+-  [![VSC][visualstudiocode]][visualstudiocode-url]
+-  [![Slack][slack.com]][slack-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,56 +124,60 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
--  npm
-   ```sh
-   npm install npm@latest -g
-   ```
+Feel free to test the app for yourself (excluding commercial purposes) when the app is ready.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+#### To host this project locally:
+
+#### 1. Clone the repo:
+
+```
+git clone https://github.com/jackharbon/walkerrr-mobile-app.git
+```
+
+#### 2. Change folders:
+
+```
+cd fit-2-ger-frontend
+```
+
+#### 3. Run app:
+
+connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
+
+-  install npm
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   npm install npm@latest -g
    ```
-3. Install NPM packages
+-  run flutter
    ```sh
-   npm install
+   flutter run
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+-  instructions on how to setup your android phone or an emulator can be found here:
+   https://docs.flutter.dev/get-started/install
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### 4. Back-end repo:
 
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+https://github.com/jackharbon/walkerrr-mobile-app/tree/main/fit-2-ger-backend
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
--  [ ] Feature 1
--  [ ] Feature 2
--  [ ] Feature 3
-   -  [ ] Nested Feature
+-  [ ] Firebase
+-  [ ] MongoDB
+-  [ ] Back-end
+-  [ ] Testing
+-  [ ] Flutter Scaffold
+-  [ ] Login/register
+-  [ ] User profile
+-  [ ] Favourites
+-  [ ] Workouts
+-  [ ] Messages
+-  [ ] Settings
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/jackharbon/walkerrr-mobile-app/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,7 +202,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU GENERAL PUBLIC LICENSE License. See <a href="https://github.com/jackharbon/walkerrr-mobile-app/blob/main/LICENSE">`LICENSE.txt` </a> for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,9 +210,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Jacek Harbon - [@JacekHarbon](https://twitter.com/JacekHarbon) - jacek@harbon.uk
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github.com/jackharbon/walkerrr-mobile-app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,41 +220,52 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 ## Acknowledgments
 
--  []()
--  []()
--  []()
+-  [Firebase](https://firebase.google.com/docs/auth)
+-  [Mongo DB](https://www.mongodb.com/)
+-  [Cyclic](https://www.cyclic.sh/)
+-  [Node.js](https://nodejs.org/en/)
+-  [NPM.js](https://www.npmjs.com/)
+-  [Fluter](https://flutter.dev/)
+-  [Dart](https://dart.dev/guides/language/language-tour)
+-  [Dart Pad](https://www.dartpad.dev/?)
+-  [Visual Studio Code](https://code.visualstudio.com/)
+-  [Android Studio](https://developer.android.com/studio)
+-  [Material Design](https://m3.material.io/)
+-  [Netlify](https://app.netlify.com/signup/start)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jackharbon/walkerrr-mobile-app.svg?style=for-the-badge
+[contributors-url]: https://github.com/jackharbon/walkerrr-mobile-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jackharbon/walkerrr-mobile-app.svg?style=for-the-badge
+[forks-url]: https://github.com/jackharbon/walkerrr-mobile-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/jackharbon/walkerrr-mobile-app.svg?style=for-the-badge
+[stars-url]: https://github.com/jackharbon/walkerrr-mobile-app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jackharbon/walkerrr-mobile-app.svg?style=for-the-badge
+[issues-url]: https://github.com/jackharbon/walkerrr-mobile-app/issues
+[license-shield]: https://img.shields.io/github/license/jackharbon/walkerrr-mobile-app.svg?style=for-the-badge
+[license-url]: https://github.com/jackharbon/walkerrr-mobile-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/jgharbon/
 [product-screenshot]: images/screenshot.png
-[next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[next-url]: https://nextjs.org/
-[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/
-[vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[vue-url]: https://vuejs.org/
-[angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[angular-url]: https://angular.io/
-[svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[svelte-url]: https://svelte.dev/
-[laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[laravel-url]: https://laravel.com
-[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[bootstrap-url]: https://getbootstrap.com
-[jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[jquery-url]: https://jquery.com
+[figma.com]: https://img.shields.io/badge/figma-e04a34?style=for-the-badge&logo=figma&logoColor=white
+[figma-url]: https://figma.com/
+[github.com]: https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white
+[github-url]: https://github.com/
+[flutter.com]: https://img.shields.io/badge/flutter-1A1744?style=for-the-badge&logo=flutter&logoColor=45C9FA
+[flutter-url]: https://flutter.dev
+[firebase.com]: https://img.shields.io/badge/firebase-039BE6?style=for-the-badge&logo=firebase&logoColor=FFA611
+[firebase-url]: https://firebase.com/
+[mongodb.com]: https://img.shields.io/badge/Mongodb-3F2C1B?style=for-the-badge&logo=mongodb&logoColor=62AC53
+[mongodb-url]: https://mongodb.com/
+[nodejs.org]: https://img.shields.io/badge/node.js-7EBB00?style=for-the-badge&logo=nodedotjs&logoColor=313429
+[nodejs-url]: https://nodejs.org/
+[socket.io]: https://img.shields.io/badge/Socket.io-grey?style=for-the-badge&logo=socketdotio&logoColor=white
+[socket-url]: https://socket.io
+[visualstudiocode]: https://img.shields.io/badge/visualstudio-3CA4EA?style=for-the-badge&logo=visualstudio&logoColor=white
+[visualstudiocode-url]: https://code.visualstudio.com
+[slack.com]: https://img.shields.io/badge/slack-E5AC2B?style=for-the-badge&logo=slack&logoColor=D91C57
+[slack-url]: https://slack.com
