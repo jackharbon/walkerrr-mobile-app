@@ -29,14 +29,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jackharbon/walkerrr-mobile-app">
-    <img src="media/logo512.png" alt="Logo" width="200" height="200">
+  <a href="https://northcoders.com">
+    <img src="media/logo512.png" alt="Northcoders logo" width="200" height="200">
   </a>
 
 <h1 align="center">WALKERRR</h1>
 
   <p align="center">
-    <a href="https://northcoders.com/our-courses/coding-bootcamp">Northcoders Software Developer Coding Bootcamp</a> final project, finished January 2023.
+    Mobile app in Flutter, <a href="https://northcoders.com/our-courses/coding-bootcamp">Northcoders Software Developer Coding Bootcamp</a> final project.<br /> Finished January 2023.
     <br />
     <br />
     <a href="https://github.com/jackharbon/walkerrr-mobile-app">View Demo</a>
@@ -88,7 +88,7 @@
 -  Tech
 -  Screens
 
-[View team presentation](https://github.com/jackharbon/walkerrr-mobile-app/blob/main/media/merge_conflict_retro.mp4)
+[![view team presentation]](https://youtu.be/wal_VPx8qZc)
 
 ### Description
 
