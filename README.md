@@ -76,11 +76,13 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+# 1. About The Project
 
 <img src="media/project_screenshots.jpg" alt="screenshots">
 
-### Planning the app
+## 1.1. Team work during the project
+
+We choose the project from 3 other ideas.
 
 -  User stories
 -  RATS
@@ -88,11 +90,15 @@
 -  Tech
 -  Screens
 
-[![view team presentation]](https://youtu.be/wal_VPx8qZc)
+### Creating process team retrospection on Youtube
 
-### Description
+<a href="https://youtu.be/n_24fcZvzug">
+    <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
+  </a>
 
-#### <u>Disclaimer</u>
+## 1.2. App Description
+
+### <u>Disclaimer</u>
 
 `This app was created as a final Northcoders Software Developer Bootcamp team project. All Rights Reserved.`
 
@@ -104,9 +110,15 @@ Wallkerrr is a mobile application for the active outdoor amateur athlete who is 
 -  send a message to other users
 -  connect to other users to see their activities
 
+### App presentation on Youtube
+
+<a href="https://youtu.be/wal_VPx8qZc">
+    <img src="media/presentation_thumb.jpg" alt="Youtube video screenshot" width="400">
+  </a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+## 1.3. Built With
 
 -  [![Figma][figma.com]][figma-url]
 -  [![Mongodb][mongodb.com]][mongodb-url]
@@ -121,27 +133,27 @@ Wallkerrr is a mobile application for the active outdoor amateur athlete who is 
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+# 2. Getting Started
 
 Feel free to test the app for yourself (excluding commercial purposes) when the app is ready.
 
-### Installation
+## 2.1. Installation
 
-#### To host this project locally:
+### To host this project locally:
 
-#### 1. Clone the repo:
+### 1. Clone the repo:
 
 ```
 git clone https://github.com/jackharbon/walkerrr-mobile-app.git
 ```
 
-#### 2. Change folders:
+### 2. Change folders:
 
 ```
-cd fit-2-ger-frontend
+ cd fit-2-ger-frontend
 ```
 
-#### 3. Run app:
+### 3. Run app:
 
 connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
 
@@ -156,13 +168,13 @@ connect your device or use an emulator and type in the command 'flutter run' in 
 -  instructions on how to setup your android phone or an emulator can be found here:
    https://docs.flutter.dev/get-started/install
 
-#### 4. Back-end repo:
+### 4. Back-end repo:
 
 https://github.com/jackharbon/walkerrr-mobile-app/tree/main/fit-2-ger-backend
 
 <!-- ROADMAP -->
 
-## Roadmap
+# 3. Roadmap
 
 -  [ ] Firebase
 -  [ ] MongoDB
@@ -177,7 +189,7 @@ See the [open issues](https://github.com/jackharbon/walkerrr-mobile-app/issues) 
 
 <!-- LICENSE -->
 
-## License
+# 4. License
 
 All rights belong to [Northcoders](http://northcoders.com). See <a href="https://github.com/jackharbon/walkerrr-mobile-app/blob/main/LICENSE">`LICENSE.txt` </a> for more information.
 
@@ -185,7 +197,7 @@ All rights belong to [Northcoders](http://northcoders.com). See <a href="https:/
 
 <!-- CONTACT -->
 
-## Contact
+# 5. Contact
 
 Jacek Harbon - [@JacekHarbon](https://twitter.com/JacekHarbon) - jacek@harbon.uk
 
@@ -195,7 +207,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments
+# 6. Acknowledgments
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
