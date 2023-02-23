@@ -142,7 +142,7 @@ After login the user can:
 -  see and buy the shop items
 -  see notifications about quests completion
 
-### App presentation on Youtube
+### App presentation video on Youtube
 
 <a href="https://youtu.be/wal_VPx8qZc">
     <img src="media/presentation_thumb.jpg" alt="Youtube video screenshot" width="400">
@@ -152,14 +152,12 @@ After login the user can:
 
 ## 1.3. Built With
 
--  [![Figma][figma.com]][figma-url]
--  [![Mongodb][mongodb.com]][mongodb-url]
--  [![Firebase][firebase.com]][firebase-url]
--  [![Flutter][flutter.com]][flutter-url]
--  [![Node.js][nodejs.org]][nodejs-url]
--  [![GitHub][github.com]][github-url]
--  [![VSC][visualstudiocode]][visualstudiocode-url]
--  [![Slack][slack.com]][slack-url]
+| Coding                                           | Back-end                                  | Front-end                              |
+| ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
+| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.com]][flutter-url] |
+| [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] |                                        |
+| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
+| [![Slack][slack.com]][slack-url]                 |                                           |                                        |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
