@@ -207,24 +207,19 @@ Useful software:
 Open Visual Studio Code terminal (`Ctr + '`)
 
 -  navigate to back-end directory
-
-```sh
-cd walkerrr-backend
-```
-
+   ```sh
+   cd walkerrr-backend
+   ```
 -  install npm and dependencies
-
-```sh
-npm install npm@latest -g
-```
-
-```sh
-sudo npm i --save
-```
-
-```sh
-npm fund
-```
+   ```sh
+   npm install npm@latest -g
+   ```
+   ```sh
+   sudo npm i --save
+   ```
+   ```sh
+   npm fund
+   ```
 
 ### Set up front-end
 
