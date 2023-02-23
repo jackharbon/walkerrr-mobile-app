@@ -140,7 +140,7 @@ After login the user can:
 -  overview of the achievements (steps today, coins, quest progress)
 -  manage character
 -  see and buy the shop items
--  see notifications about quests competition
+-  see notifications about quests completion
 
 ### App presentation on Youtube
 
