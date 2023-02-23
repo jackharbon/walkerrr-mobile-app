@@ -239,7 +239,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 <!-- ACKNOWLEDGMENTS -->
 
-# Acknowledgments
+# 6. Acknowledgments
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
