@@ -184,22 +184,44 @@ Usefull software:
 
 ### To host this project locally:
 
-### 1. Clone the repo:
+1. Register your account on GitHub, read this [Docs](https://docs.github.com/en/get-started/quickstart/set-up-git) for settting up Git.
+2. Use "Fork" button in the top right corner of this page to copy this repository to your account.
+3. You can leave repository name as it is, click green button "Create fork".
+4. Open a modal window by clicking green button "<> Code" and copy the link to your fork which looks like this: `https://github.com/your_github_name/walkerrr-mobile-app.git`
+5. Open your Terminal (for Windows read [this](https://github.com/microsoft/terminal) and [this](https://learn.microsoft.com/en-us/windows/terminal/)) and navigate `cd /path/to/folder` to your projects folder.
 
-```
-git clone https://github.com/jackharbon/walkerrr-mobile-app.git
-```
+-  clone repository to your computer
+   ```sh
+   git clone https://github.com/your_github_name/walkerrr-mobile-app.git
+   ```
+-  navigate to repo folder
+   ```sh
+   cd walkerrr-mobile-app
+   ```
+-  open Visual Studio Code
+   ```sh
+   code .
+   ```
 
-### 2. Change folders:
+### Back-end
 
-```
- cd fit-2-ger-frontend
-```
+-  navigate to front-end directory
+   ```sh
+   cd walkerrr-frontend
+   ```
+-  install npm
+   ```sh
+   npm install npm@latest -g
+   ```
 
-### 3. Run app:
+### Front-end
 
 connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
 
+-  navigate to back-end directory
+   ```sh
+   cd walkerrr-backend
+   ```
 -  install npm
    ```sh
    npm install npm@latest -g
@@ -210,10 +232,6 @@ connect your device or use an emulator and type in the command 'flutter run' in 
    ```
 -  instructions on how to setup your android phone or an emulator can be found here:
    https://docs.flutter.dev/get-started/install
-
-### 4. Back-end repo:
-
-https://github.com/jackharbon/walkerrr-mobile-app/tree/main/fit-2-ger-backend
 
 <!-- ROADMAP -->
 
