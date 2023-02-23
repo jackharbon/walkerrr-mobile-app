@@ -70,7 +70,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#7.acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 <br />
@@ -239,7 +239,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 <!-- ACKNOWLEDGMENTS -->
 
-# 6. Acknowledgments
+# 7. Acknowledgments
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
