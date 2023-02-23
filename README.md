@@ -158,7 +158,6 @@ After login the user can:
 | [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] |                                        |
 | [![VSC][visualstudiocode]][visualstudiocode-url] | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
 | [![Slack][slack.com]][slack-url]                 |                                           |                                        |
-| ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
