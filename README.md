@@ -80,9 +80,9 @@
 
 <img src="media/project_screenshots.jpg" alt="screenshots">
 
-## 1.1. Project
+## 1.1. Project team
 
-Our team name was Merge Conflict
+Our team name was Merge Conflict with team members:
 
 -  [David Holmes](https://github.com/DavidH3031)
 -  [GJ Abordo](https://github.com/26june)
@@ -127,13 +127,20 @@ Our team worked remotely using:
 
 `This app was created as a final Northcoders Software Developer Bootcamp team project. All Rights Reserved for Northcoders.`
 
-Wallkerrr is a mobile application for the active outdoor amateur athlete who is looking for other people to exercise with. After login the user can:
+Project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it.
 
--  register her/his own regular workouts
--  set up prefered searched new workouts
--  search and add other's workouts to favourites
--  send a message to other users
--  connect to other users to see their activities
+User steps complete different quests which earn coins, these can then be used to buy armor for your base character.
+
+Quests will be started by the user and have a time limit in which to complete them, quests with more steps will earn better prizes.
+
+After login the user can:
+
+-  navigate through the app (Steps, Quests, Settings)
+-  vie the list of quests
+-  overview of the achievements (steps today, coins, quest progress)
+-  manage character
+-  see and buy the shop items
+-  see notifications about quests competition
 
 ### App presentation on Youtube
 
