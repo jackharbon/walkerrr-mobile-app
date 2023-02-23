@@ -189,7 +189,7 @@ Useful software:
    ```sh
    npm -v
    ```
--  clone repository to your computer (change 'your_github_name' for your actual GitHyb name)
+-  clone repository to your computer (change `your_github_name` for your actual GitHub login)
    ```sh
    git clone https://github.com/your_github_name/walkerrr-mobile-app.git
    ```
