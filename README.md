@@ -51,11 +51,12 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#1.-about-the-project">1. About The Project</a>
       <ul>
-        <li><a href="#planning-the-app">Planning the app</a></li>
-        <li><a href="#description">Description</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#1.1.-project-team">1.1. Project team</a></li>
+        <li><a href="#1.2.-planning-process">1.2. Planning process</a></li>
+        <li><a href="#1.3.-app-description">1.3. App Description</a></li>
+        <li><a href="#1.4.-built-with">1.4. Built With</a></li>
       </ul>
     </li>
     <li>
@@ -121,7 +122,7 @@ Our team worked remotely using:
     <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
   </a>
 
-## 1.2. App Description
+## 1.3. App Description
 
 ### <u>Disclaimer</u>
 
@@ -150,13 +151,13 @@ After login the user can:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 1.3. Built With
+## 1.4. Built With
 
 | Coding                                           | Back-end                                  | Front-end                              |
 | ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
 | planning, version control, code editing          | database, authentication, environment     | framework and language                 |
-| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.com]][flutter-url] |
-| [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] |                                        |
+| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.dev]][flutter-url] |
+| [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] | [![Dart][dart.dev]][dart-url]          |
 | [![VSC][visualstudiocode]][visualstudiocode-url] | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
 | [![Slack][slack.com]][slack-url]                 |                                           |                                        |
 
@@ -276,8 +277,10 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 [figma-url]: https://figma.com/
 [github.com]: https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white
 [github-url]: https://github.com/
-[flutter.com]: https://img.shields.io/badge/flutter-1A1744?style=for-the-badge&logo=flutter&logoColor=45C9FA
+[flutter.dev]: https://img.shields.io/badge/flutter-1A1744?style=for-the-badge&logo=flutter&logoColor=45C9FA
 [flutter-url]: https://flutter.dev
+[dart.dev]: https://img.shields.io/badge/dart-838383?style=for-the-badge&logo=dart&logoColor=055A9D
+[dart-url]: https://dart.dev
 [firebase.com]: https://img.shields.io/badge/firebase-039BE6?style=for-the-badge&logo=firebase&logoColor=FFA611
 [firebase-url]: https://firebase.com/
 [mongodb.com]: https://img.shields.io/badge/Mongodb-3F2C1B?style=for-the-badge&logo=mongodb&logoColor=62AC53
