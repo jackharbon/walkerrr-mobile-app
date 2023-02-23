@@ -80,17 +80,42 @@
 
 <img src="media/project_screenshots.jpg" alt="screenshots">
 
-## 1.1. Team work during the project
+## 1.1. Project
 
-We choose the project from 3 other ideas.
+Our team name was Merge Conflict
+
+-  [David Holmes](https://github.com/DavidH3031)
+-  [GJ Abordo](https://github.com/26june)
+-  [Eddy King](https://github.com/EddySafc)
+-  [Jak Harbon](https://github.com/jackharbon/)
+
+## 1.2. Planning process
+
+We had 4 different ideas for the project app described by:
 
 -  User stories
+-  MVP
 -  RATS
 -  Spiking
--  Tech
--  Screens
 
-### Creating process team retrospection on Youtube
+[See FigJam board >](https://www.figma.com/file/IepeA19A72gyPp7fKbP0Ga/merge-conflict-plan?node-id=165%3A340&t=tBJIxTIG2vH7dUhY-1)
+
+Finally, after spiking and testing different variants for the whole week, we've chosen Walkerrr with tech:
+
+-  Firebase for authentication
+-  MongoDB for back-end
+-  Flutter/Dart for front-end
+   (rejecting React Native and Expo, as they created some problems during spiking).
+
+Our team worked remotely using:
+
+-  work-in-pairs method (navigator and coder)
+-  Slack Huddles for stand-up meetings and pairings
+-  FigJam for planning
+-  GitHub for version control
+-  Trello board for organising tasks and tickets
+
+### Team's retrospection video on Youtube
 
 <a href="https://youtu.be/n_24fcZvzug">
     <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
@@ -100,7 +125,7 @@ We choose the project from 3 other ideas.
 
 ### <u>Disclaimer</u>
 
-`This app was created as a final Northcoders Software Developer Bootcamp team project. All Rights Reserved.`
+`This app was created as a final Northcoders Software Developer Bootcamp team project. All Rights Reserved for Northcoders.`
 
 Wallkerrr is a mobile application for the active outdoor amateur athlete who is looking for other people to exercise with. After login the user can:
 
