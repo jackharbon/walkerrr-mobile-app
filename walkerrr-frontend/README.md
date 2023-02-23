@@ -1,4 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<!-- The project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it.-->
 
 <a name="readme-top"></a>
 

@@ -1,23 +1,6 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<!-- The project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it.-->
 
 <a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
 <br />
 <div align="center">
@@ -30,14 +13,13 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-
 <br />
 
   <a href="https://northcoders.com">
     <img src="../media/logo512.png" alt="Northcoders logo" width="200" height="200">
   </a>
 
-<h1 align="center">WALKERRR BACK-END</h1>
+<h1 align="center">WALKERRR</h1>
 
   <p align="center">
     Mobile app in Flutter, <a href="https://northcoders.com/our-courses/coding-bootcamp">Northcoders Software Developer Coding Bootcamp</a> final project.<br /> Finished January 2023.
@@ -106,7 +88,7 @@ We had 4 different ideas for the project app described by:
 
 [See FigJam board >](https://www.figma.com/file/IepeA19A72gyPp7fKbP0Ga/merge-conflict-plan?node-id=165%3A340&t=tBJIxTIG2vH7dUhY-1)
 
-Finally, after spiking and testing different variants for the whole week, we've chosen Walkerrr with tech:
+Finally, after spiking and testing different variants for the whole week, we chose Walkerrr with tech:
 
 -  Firebase for authentication
 -  MongoDB for back-end
@@ -135,18 +117,18 @@ Our team worked remotely using:
 
 `This app was created as a final Northcoders Software Developer Bootcamp team project. All Rights Reserved for Northcoders.`
 
-Project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it.
+The project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it.
 
-User steps complete different quests which earn coins, these can then be used to buy armor for your base character.
+The user makes steps to complete different quests which earn coins, these can then be used to buy armour for your base character.
 
 Quests will be started by the user and have a time limit in which to complete them, quests with more steps will earn better prizes.
 
 After login the user can:
 
 -  navigate through the app (Steps, Quests, Settings)
--  vie the list of quests
--  overview of the achievements (steps today, coins, quest progress)
--  manage character
+-  view the list of quests
+-  get an overview of the achievements (steps today, coins, quest progress)
+-  manage their character
 -  see and buy the shop items
 -  see notifications about quests completion
 
@@ -178,9 +160,9 @@ Feel free to test the app for yourself (excluding commercial purposes, all right
 
 ## Prerequisites
 
-To run the app you need a few pieces of software. Installing process will depend on your computer operating system (Linux, Mac OS, MS Windows), so I include general instructions, for more detailed steps you need to read the software provider's instructions (docs) for the specific system. And also I DO NOT recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) (Windows Subsystem for Linux), because of the problems with Android emulation, as WSL does not support GUI applications and SDK for Windows do not work with WSL.
+To run the app you need a few pieces of software. The installation process will depend on your computer operating system (Linux, Mac OS, MS Windows), so I have included general instructions, for more detailed steps you need to read the software provider's instructions (docs) for the specific system. And also I DO NOT recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) (Windows Subsystem for Linux), because of the problems with Android emulation, as WSL does not support GUI applications and SDK for Windows do not work with WSL.
 
-Usefull software:
+Useful software:
 
 -  JavaScript runtime environment [Node.js](https://nodejs.org/en/)
 -  Source code editor like [Visual Studio Code](https://code.visualstudio.com/Download)
@@ -191,14 +173,22 @@ Usefull software:
 
 ## Installation
 
-### Host this project locally
+### 1. Host this project locally
 
 1. Register your account on GitHub, read this [Docs](https://docs.github.com/en/get-started/quickstart/set-up-git) for settting up Git.
 2. Use "Fork" button in the top right corner of this page to copy this repository to your account.
-3. You can leave repository name as it is, click green button "Create fork".
-4. Open a modal window by clicking green button "<> Code" and copy the link to your fork which looks like this: `https://github.com/your_github_name/walkerrr-mobile-app.git`
+3. You can leave the repository name as it is, click the green button "Create fork".
+4. Open a modal window by clicking the green button "<> Code" and copy the link to your fork which looks like this: `https://github.com/your_github_name/walkerrr-mobile-app.git`
 5. Open your Terminal (for Windows read [this](https://github.com/microsoft/terminal) and [this](https://learn.microsoft.com/en-us/windows/terminal/)) and navigate `cd /path/to/folder` to your projects folder.
 
+-  check Node.js installation
+   ```sh
+   node -v .
+   ```
+-  check NPM installation
+   ```sh
+   npm -v .
+   ```
 -  clone repository to your computer
    ```sh
    git clone https://github.com/your_github_name/walkerrr-mobile-app.git
@@ -212,26 +202,26 @@ Usefull software:
    code .
    ```
 
-### Back-end
+### 2. Set up back-end
 
 Open Visual Studio Code terminal (`Ctr + '`)
 
--  navigate to front-end directory
+-  navigate to back-end directory
    ```sh
-   cd walkerrr-frontend
+   cd walkerrr-backend
    ```
 -  install npm
    ```sh
    npm install npm@latest -g
    ```
 
-### Front-end
+### Set up front-end
 
 connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
 
 -  navigate to back-end directory
    ```sh
-   cd walkerrr-backend
+   cd walkerrr-frontend
    ```
 -  install npm
    ```sh
