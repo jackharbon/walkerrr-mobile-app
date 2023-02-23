@@ -190,7 +190,7 @@ Usefull software:
 
 ## Installation
 
-### Host this project locally
+### To host this project locally
 
 1. Register your account on GitHub, read this [Docs](https://docs.github.com/en/get-started/quickstart/set-up-git) for settting up Git.
 2. Use "Fork" button in the top right corner of this page to copy this repository to your account.
