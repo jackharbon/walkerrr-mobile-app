@@ -51,20 +51,20 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#1.-about-the-project">1. About The Project</a>
-      <ul>
-        <li><a href="#1.1.-project-team">1.1. Project team</a></li>
-        <li><a href="#1.2.-planning-process">1.2. Planning process</a></li>
-        <li><a href="#1.3.-app-description">1.3. App Description</a></li>
-        <li><a href="#1.4.-built-with">1.4. Built With</a></li>
-      </ul>
+      <a href="#about-the-project">About The Project</a>
+      <ol>
+        <li><a href="#project-team">Project team</a></li>
+        <li><a href="#planning-process">Planning process</a></li>
+        <li><a href="#app-description">App Description</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ol>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
+      <ol>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-      </ul>
+      </ol>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -77,11 +77,11 @@
 
 <!-- ABOUT THE PROJECT -->
 
-# 1. About The Project
+# About The Project
 
 <img src="media/project_screenshots.jpg" alt="screenshots">
 
-## 1.1. Project team
+## Project team
 
 Our team name was Merge Conflict with team members:
 
@@ -90,7 +90,7 @@ Our team name was Merge Conflict with team members:
 -  [Eddy King](https://github.com/EddySafc)
 -  [Jak Harbon](https://github.com/jackharbon/)
 
-## 1.2. Planning process
+## Planning process
 
 We had 4 different ideas for the project app described by:
 
@@ -122,7 +122,7 @@ Our team worked remotely using:
     <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
   </a>
 
-## 1.3. App Description
+## App Description
 
 ### <u>Disclaimer</u>
 
@@ -151,7 +151,7 @@ After login the user can:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 1.4. Built With
+## Built With
 
 | Coding                                           | Back-end                                  | Front-end                              |
 | ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
@@ -165,11 +165,11 @@ After login the user can:
 
 <!-- GETTING STARTED -->
 
-# 2. Getting Started
+# Getting Started
 
 Feel free to test the app for yourself (excluding commercial purposes) when the app is ready.
 
-## 2.1. Installation
+## Installation
 
 ### To host this project locally:
 
@@ -206,7 +206,7 @@ https://github.com/jackharbon/walkerrr-mobile-app/tree/main/fit-2-ger-backend
 
 <!-- ROADMAP -->
 
-# 3. Roadmap
+# Roadmap
 
 -  [ ] Firebase
 -  [ ] MongoDB
@@ -221,7 +221,7 @@ See the [open issues](https://github.com/jackharbon/walkerrr-mobile-app/issues) 
 
 <!-- LICENSE -->
 
-# 4. License
+# License
 
 All rights belong to [Northcoders](http://northcoders.com). See <a href="https://github.com/jackharbon/walkerrr-mobile-app/blob/main/LICENSE">`LICENSE.txt` </a> for more information.
 
@@ -229,7 +229,7 @@ All rights belong to [Northcoders](http://northcoders.com). See <a href="https:/
 
 <!-- CONTACT -->
 
-# 5. Contact
+# Contact
 
 Jacek Harbon - [@JacekHarbon](https://twitter.com/JacekHarbon) - jacek@harbon.uk
 
@@ -239,7 +239,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 <!-- ACKNOWLEDGMENTS -->
 
-# 6. Acknowledgments
+# Acknowledgments
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
