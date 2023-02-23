@@ -19,6 +19,9 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+<br />
+<div align="center">
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -28,7 +31,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+
   <a href="https://northcoders.com">
     <img src="media/logo512.png" alt="Northcoders logo" width="200" height="200">
   </a>

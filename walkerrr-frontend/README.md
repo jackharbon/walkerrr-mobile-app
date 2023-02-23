@@ -18,6 +18,8 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<br />
+<div align="center">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -27,10 +29,11 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
+
 <br />
-<div align="center">
+
   <a href="https://northcoders.com">
-    <img src="media/logo512.png" alt="Northcoders logo" width="200" height="200">
+    <img src="../media/logo512.png" alt="Northcoders logo" width="200" height="200">
   </a>
 
 <h1 align="center">WALKERRR FRONT-END</h1>
@@ -78,7 +81,7 @@
 
 # About The Project
 
-<img src="media/project_screenshots.jpg" alt="screenshots">
+<img src="../media/project_screenshots.jpg" alt="screenshots">
 
 ## Project team
 
@@ -120,7 +123,7 @@ Our team worked remotely using:
 ### Team's retrospection video on Youtube
 
 <a href="https://youtu.be/n_24fcZvzug">
-    <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
+    <img src="../media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
   </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,7 +152,7 @@ After login the user can:
 ### App presentation video on Youtube
 
 <a href="https://youtu.be/wal_VPx8qZc">
-    <img src="media/presentation_thumb.jpg" alt="Youtube video screenshot" width="400">
+    <img src="../media/presentation_thumb.jpg" alt="Youtube video screenshot" width="400">
   </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
