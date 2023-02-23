@@ -89,6 +89,8 @@ Our team name was Merge Conflict with team members:
 -  [Eddy King](https://github.com/EddySafc)
 -  [Jak Harbon](https://github.com/jackharbon/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Planning process
 
 We had 4 different ideas for the project app described by:
@@ -120,6 +122,8 @@ Our team worked remotely using:
 <a href="https://youtu.be/n_24fcZvzug">
     <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
   </a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## App Description
 
@@ -179,9 +183,11 @@ Usefull software:
 -  Android SDK with emulator [Android Studio](https://developer.android.com/studio#downloads)
 -  You may want to install desktop verion of [GitHub](https://desktop.github.com/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Installation
 
-### To host this project locally:
+### Host this project locally
 
 1. Register your account on GitHub, read this [Docs](https://docs.github.com/en/get-started/quickstart/set-up-git) for settting up Git.
 2. Use "Fork" button in the top right corner of this page to copy this repository to your account.
@@ -231,6 +237,8 @@ connect your device or use an emulator and type in the command 'flutter run' in 
    ```
 -  instructions on how to setup your android phone or an emulator can be found here:
    https://docs.flutter.dev/get-started/install
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 
