@@ -90,7 +90,7 @@ Our team name was Merge Conflict with team members:
 -  [David Holmes](https://github.com/DavidH3031)
 -  [GJ Abordo](https://github.com/26june)
 -  [Eddy King](https://github.com/EddySafc)
--  [Jak Harbon](https://github.com/jackharbon/)
+-  [Jack Harbon](https://github.com/jackharbon/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,6 +212,8 @@ Usefull software:
    ```
 
 ### Back-end
+
+Open Visual Studio Code terminal (`Ctr + '`)
 
 -  navigate to front-end directory
    ```sh
