@@ -49,29 +49,29 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-  <ol>
+  <ul>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ol>
+      <ul>
         <li><a href="#project-team">Project team</a></li>
         <li><a href="#planning-process">Planning process</a></li>
         <li><a href="#app-description">App Description</a></li>
         <li><a href="#built-with">Built With</a></li>
-      </ol>
+      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ol>
+      <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-      </ol>
+      </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#7.-acknowledgments">Acknowledgments</a></li>
-  </ol>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
 </details>
 <br />
 
@@ -239,7 +239,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 <!-- ACKNOWLEDGMENTS -->
 
-# 7. Acknowledgments
+# Acknowledgments
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
