@@ -154,6 +154,7 @@ After login the user can:
 
 | Coding                                           | Back-end                                  | Front-end                              |
 | ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
+| planning, version control, code editing          | database, authentication, environment     | framework and language                 |
 | [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.com]][flutter-url] |
 | [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] |                                        |
 | [![VSC][visualstudiocode]][visualstudiocode-url] | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
