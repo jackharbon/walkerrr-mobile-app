@@ -6,8 +6,8 @@
     "mongoose": "^6.8.0",
     "nodemon": "^2.0.20"
   },
-  "name": "walking-backend",
-  "description": "",
+  "name": "walkerrr-backend",
+  "description": "The project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -17,12 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DavidH3031/walking-backend.git"
+    "url": "git+https://github.com/jackharbon/walkerrr-mobile-app.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DavidH3031/walking-backend/issues"
+    "url": "https://github.com/jackharbon/walkerrr-mobile-app/issues"
   },
-  "homepage": "https://github.com/DavidH3031/walking-backend#readme"
+  "homepage": "https://github.com/jackharbon/walkerrr-mobile-app#readme",
+  "keywords": []
 }
