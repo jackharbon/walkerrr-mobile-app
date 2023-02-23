@@ -167,7 +167,18 @@ After login the user can:
 
 # Getting Started
 
-Feel free to test the app for yourself (excluding commercial purposes) when the app is ready.
+Feel free to test the app for yourself (excluding commercial purposes, all rights belong to [Northcoders](https://northcoders.com/)).
+
+## Prerequisites
+
+To run the app you need a few pieces of software. Installing process will depend on your computer operating system (Linux, Mac OS, MS Windows), so I include general instructions, for more detailed steps you need to read the software provider's instructions (docs) for the specific system. And also I DO NOT recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) (Windows Subsystem for Linux), because of the problems with Android emulation, as WSL does not support GUI applications and SDK for Windows do not work with WSL.
+
+Usefull software:
+
+-  JavaScript runtime environment [Node.js](https://nodejs.org/en/)
+-  Source code editor like [Visual Studio Code](https://code.visualstudio.com/Download)
+-  Android SDK with emulator [Android Studio](https://developer.android.com/studio#downloads)
+-  You may want to install desktop verion of [GitHub](https://desktop.github.com/)
 
 ## Installation
 
