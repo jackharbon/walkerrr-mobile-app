@@ -183,13 +183,13 @@ Useful software:
 
 -  check Node.js installation
    ```sh
-   node -v .
+   node -v
    ```
 -  check NPM installation
    ```sh
-   npm -v .
+   npm -v
    ```
--  clone repository to your computer
+-  clone repository to your computer (change 'your_github_name' for your actual GitHyb name)
    ```sh
    git clone https://github.com/your_github_name/walkerrr-mobile-app.git
    ```
