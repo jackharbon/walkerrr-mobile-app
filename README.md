@@ -237,12 +237,14 @@ connect your device or use an emulator and type in the command 'flutter run' in 
 
 # Roadmap
 
--  [ ] Firebase
--  [ ] MongoDB
--  [ ] Back-end
--  [ ] Testing
--  [ ] Flutter Scaffold
--  [ ] Login/register
+-  [x] Login/register page
+-  [x] Settings - user profile
+-  [x] Quests
+-  [x] Steps
+-  [x] Inventory
+-  [ ] Customisation
+-  [ ] Stats reseting
+-  [ ] Notifications
 
 See the [open issues](https://github.com/jackharbon/walkerrr-mobile-app/issues) for a full list of proposed features (and known issues).
 
