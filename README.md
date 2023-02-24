@@ -142,13 +142,13 @@ After login the user can:
 
 ## Built With
 
-| Coding                                           | Back-end                                    | Front-end                              |
-| ------------------------------------------------ | ------------------------------------------- | -------------------------------------- |
-| planning, version control, code editing          | database, authentication, environment       | framework and language                 |
-| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]      | [![Flutter][flutter.dev]][flutter-url] |
-| [![GitHub][github.com]][github-url]              | [![Mongoose][mongoosejs.com]][mongoose-url] | [![Dart][dart.dev]][dart-url]          |
-| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Firebase][firebase.com]][firebase-url]   |                                        |
-| [![Slack][slack.com]][slack-url]                 | [![Node.js][nodejs.org]][nodejs-url]        |                                        |
+| Coding                                           | Back-end                                  | Front-end                              |
+| ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
+| planning, version control, code editing          | database, authentication, environment     | framework and language                 |
+| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.dev]][flutter-url] |
+| [![GitHub][github.com]][github-url]              | [![Mongoose][mongoose.com]][mongoose-url] | [![Dart][dart.dev]][dart-url]          |
+| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Firebase][firebase.com]][firebase-url] |                                        |
+| [![Slack][slack.com]][slack-url]                 | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
