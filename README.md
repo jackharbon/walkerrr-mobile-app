@@ -181,23 +181,23 @@ Useful software:
 4. Open a modal window by clicking the green button "<> Code" and copy the link to your fork which looks like this: `https://github.com/your_github_name/walkerrr-mobile-app.git`
 5. Open your Terminal (for Windows read [this](https://github.com/microsoft/terminal) and [this](https://learn.microsoft.com/en-us/windows/terminal/)) and navigate `cd /path/to/folder` to your projects folder.
 
--  check Node.js installation
+-  Check Node.js installation
    ```sh
    node -v
    ```
--  check NPM installation
+-  Ceck NPM installation
    ```sh
    npm -v
    ```
--  clone repository to your computer (change `your_github_name` to your actual GitHub login)
+-  Clone repository to your computer (change `your_github_name` to your actual GitHub login)
    ```sh
    git clone https://github.com/your_github_name/walkerrr-mobile-app.git
    ```
--  navigate to repo folder
+-  Navigate to repo folder
    ```sh
    cd walkerrr-mobile-app
    ```
--  open Visual Studio Code
+-  Open Visual Studio Code
    ```sh
    code .
    ```
@@ -208,11 +208,11 @@ Open Visual Studio Code terminal (`Ctr + '`)
 
 1. Preparations
 
--  navigate to back-end directory
+-  Navigate to back-end directory
    ```sh
    cd walkerrr-backend
    ```
--  update npm and install dependencies
+-  Update npm and install dependencies
    ```sh
    npm install npm@latest -g
    ```
@@ -223,13 +223,29 @@ Open Visual Studio Code terminal (`Ctr + '`)
    npm fund
    ```
 
-2. Database configuration
+2. Database connection
 
--  navigate to back-end directory
+If you need help with those steps, watch YouTube tutorial [How to Connect Node.js App to MongoDB | Node.js & MongoDB Tutorial](https://youtu.be/bhiEJW5poHU) or read [MongoDB docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/).
+
+-  Go to [MongoDB](https://www.mongodb.com/cloud/atlas/register) page and register account (you can sign up with Google).
+-  Create new cluster (database).<br />
+   Goal: "Build a new application".<br />
+   Type of application: f.e. "Web Application".<br />
+   Preferred language: "JavaScript".<br />
+   Click "Finish"
+-  Click "Create" button for free shared database.<br />
+   Give a name "Walkerrr" and create cluster.
+-  Create a database user with username (f.e. walkerrr) and password (remember the password). Click "Create user" button and "Add My Current IP Adress" and "Finish and Close" below.
+-  Click "Connect" -> "Connect your application" button.
+-  Copy your connection string, the link, which looks like this:
+   ```sh
+   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   ```
+-  Navigate to back-end directory
    ```sh
    cd walkerrr-backend
    ```
--  update npm and install dependencies
+-  Update npm and install dependencies
    ```sh
    npm install npm@latest -g
    ```
@@ -244,19 +260,19 @@ Open Visual Studio Code terminal (`Ctr + '`)
 
 connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
 
--  navigate to front-end directory
+-  Navigate to front-end directory
    ```sh
    cd walkerrr-frontend
    ```
--  install npm
+-  Install npm
    ```sh
    npm install npm@latest -g
    ```
--  run flutter
+-  Run flutter
    ```sh
    flutter run
    ```
--  instructions on how to setup your android phone or an emulator can be found here:
+-  Instructions on how to setup your android phone or an emulator can be found here:
    https://docs.flutter.dev/get-started/install
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -300,7 +316,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
--  [Mongo DB](https://www.mongodb.com/)
+-  [Mongo DB](https://www.mongodb.com/docs/drivers/node/current/)
 -  [Mongoose](https://mongoosejs.com/docs/index.html)
 -  [Cyclic](https://www.cyclic.sh/)
 -  [Node.js](https://nodejs.org/en/)
