@@ -142,13 +142,13 @@ After login the user can:
 
 ## Built With
 
-| Coding                                           | Back-end                                  | Front-end                              |
-| ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
-| planning, version control, code editing          | database, authentication, environment     | framework and language                 |
-| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.dev]][flutter-url] |
-| [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] | [![Dart][dart.dev]][dart-url]          |
-| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
-| [![Slack][slack.com]][slack-url]                 |                                           |                                        |
+| Coding                                           | Back-end                                    | Front-end                              |
+| ------------------------------------------------ | ------------------------------------------- | -------------------------------------- |
+| planning, version control, code editing          | database, authentication, environment       | framework and language                 |
+| [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]      | [![Flutter][flutter.dev]][flutter-url] |
+| [![GitHub][github.com]][github-url]              | [![Mongoose][mongoosejs.com]][mongoose-url] | [![Dart][dart.dev]][dart-url]          |
+| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Firebase][firebase.com]][firebase-url]   |                                        |
+| [![Slack][slack.com]][slack-url]                 | [![Node.js][nodejs.org]][nodejs-url]        |                                        |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,15 +202,34 @@ Useful software:
    code .
    ```
 
+Open Visual Studio Code terminal (`Ctr + '`)
+
 ### 2. Set up back-end
 
-Open Visual Studio Code terminal (`Ctr + '`)
+1. Preparations
 
 -  navigate to back-end directory
    ```sh
    cd walkerrr-backend
    ```
--  install npm and dependencies
+-  update npm and install dependencies
+   ```sh
+   npm install npm@latest -g
+   ```
+   ```sh
+   sudo npm i --save
+   ```
+   ```sh
+   npm fund
+   ```
+
+2. Database configuration
+
+-  navigate to back-end directory
+   ```sh
+   cd walkerrr-backend
+   ```
+-  update npm and install dependencies
    ```sh
    npm install npm@latest -g
    ```
@@ -225,7 +244,7 @@ Open Visual Studio Code terminal (`Ctr + '`)
 
 connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
 
--  navigate to back-end directory
+-  navigate to front-end directory
    ```sh
    cd walkerrr-frontend
    ```
@@ -282,6 +301,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
 -  [Mongo DB](https://www.mongodb.com/)
+-  [Mongoose](https://mongoosejs.com/docs/index.html)
 -  [Cyclic](https://www.cyclic.sh/)
 -  [Node.js](https://nodejs.org/en/)
 -  [NPM.js](https://www.npmjs.com/)
@@ -292,6 +312,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 -  [Android Studio](https://developer.android.com/studio)
 -  [Material Design](https://m3.material.io/)
 -  [Netlify](https://app.netlify.com/signup/start)
+-  [Render](https://render.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -323,6 +344,8 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 [firebase-url]: https://firebase.com/
 [mongodb.com]: https://img.shields.io/badge/Mongodb-3F2C1B?style=for-the-badge&logo=mongodb&logoColor=62AC53
 [mongodb-url]: https://mongodb.com/
+[mongoose.com]: https://img.shields.io/badge/mongoose-3F2C1B?style=for-the-badge&logo=mongoose&logoColor=62AC53
+[mongoose-url]: https://mongoose.com/
 [nodejs.org]: https://img.shields.io/badge/node.js-7EBB00?style=for-the-badge&logo=nodedotjs&logoColor=313429
 [nodejs-url]: https://nodejs.org/
 [visualstudiocode]: https://img.shields.io/badge/visualstudio-3CA4EA?style=for-the-badge&logo=visualstudio&logoColor=white
