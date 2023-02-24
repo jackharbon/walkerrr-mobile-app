@@ -344,7 +344,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 [firebase-url]: https://firebase.com/
 [mongodb.com]: https://img.shields.io/badge/Mongodb-3F2C1B?style=for-the-badge&logo=mongodb&logoColor=62AC53
 [mongodb-url]: https://mongodb.com/
-[mongoose.com]: https://img.shields.io/badge/mongoose-3F2C1B?style=for-the-badge&logo=mongoose&logoColor=62AC53
+[mongoose.com]: https://img.shields.io/badge/mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white
 [mongoose-url]: https://mongoose.com/
 [nodejs.org]: https://img.shields.io/badge/node.js-7EBB00?style=for-the-badge&logo=nodedotjs&logoColor=313429
 [nodejs-url]: https://nodejs.org/
