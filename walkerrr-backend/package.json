@@ -1,29 +1,29 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^6.8.0",
-    "nodemon": "^2.0.20"
-  },
-  "name": "walkerrr-backend",
-  "description": "The project app is called Wallkerrr. It is an app that makes walking more exciting by adding an rpg element to it",
-  "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node listen.js",
-    "dev": "nodemon listen.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jackharbon/walkerrr-mobile-app.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jackharbon/walkerrr-mobile-app/issues"
-  },
-  "homepage": "https://github.com/jackharbon/walkerrr-mobile-app#readme",
-  "keywords": []
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mongoose": "^6.8.0",
+		"nodemon": "^2.0.20"
+	},
+	"name": "walkerrr-backend",
+	"description": "Wallkerrr is an app that makes walking more exciting by adding an rpg element to it",
+	"version": "1.0.0",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node listen.js",
+		"dev": "nodemon listen.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jackharbon/walkerrr-mobile-app.git"
+	},
+	"author": "Merge Conflict - Northcoders Bootcamp team",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jackharbon/walkerrr-mobile-app/issues"
+	},
+	"homepage": "https://github.com/jackharbon/walkerrr-mobile-app#readme",
+	"keywords": []
 }
