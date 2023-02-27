@@ -222,6 +222,9 @@ Open Visual Studio Code terminal (`Ctr + '`)
    ```sh
    npm fund
    ```
+   ```sh
+   npm init -y
+   ```
 
 2. Database connection
 
@@ -234,31 +237,33 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    Preferred language: "JavaScript".<br />
    Click "Finish"
 -  Click "Create" button for free shared database.<br />
-   Give a name "Walkerrr" and create cluster.
--  Create a database user with username (f.e. walkerrr) and password (remember the password). Click "Create user" button and "Add My Current IP Adress" and "Finish and Close" below.
+   Give a name "walkerrr" and create cluster.
+-  Create a database user with username "walkerrr" and password (remember the password). Click "Create user" button and "Add My Current IP Adress" and "Finish and Close" below.
 -  Click "Connect" -> "Connect your application" button.
 -  Copy your connection string, the link, which looks like this:
    ```sh
    mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
--  Navigate to back-end directory
+   Replace `<password>` with your password.
+-  Open the file `.env-example`, save it as `.env` and paste the above link (with the proper password).
    ```sh
-   cd walkerrr-backend
+   DATABASE_URL=mongodb+srv://walkerrr:<PASSWORD>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
--  Update npm and install dependencies
+-  Open Visual Studio Code terminal (check if you are in `walkerrr-backend` folder), type
    ```sh
-   npm install npm@latest -g
+   npm start
+   ```
+-  If everything went fine you will get confirmation messages
+   ```sh
+   Listening on port 9095...
    ```
    ```sh
-   sudo npm i --save
-   ```
-   ```sh
-   npm fund
+   Remote MongoDB connected...
    ```
 
 ### Set up front-end
 
-connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
+Connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
 
 -  Navigate to front-end directory
    ```sh
