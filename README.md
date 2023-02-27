@@ -249,6 +249,11 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    ```sh
    DATABASE_URL=mongodb+srv://walkerrr:<PASSWORD>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
+-  Go to "Data API" card in "Services" MongoDB panel's section, select database name ("walkerrr") from the list and click "Enable Data Access from the Data API" green button.
+-  Copy database URL endpoint link, which looks like this:
+   ```sh
+   https://eu-west-2.aws.data.mongodb-api.com/app/data-kbwda/endpoint/data/v1
+   ```
 -  Open Visual Studio Code terminal (check if you are in `walkerrr-backend` folder), type
    ```sh
    npm start
@@ -265,11 +270,11 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
 
 1. Preparations
 
--  Install Flutter extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) or by searching within VS Code. The Dart extension will be installed automatically, if not already installed.
 -  Install Flutter on your computer
    ```sh
    https://docs.flutter.dev/get-started/install
    ```
+-  Install Flutter extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) or by searching within VS Code. The Dart extension will be installed automatically, if not already installed.
 -  Open second terminal in Visual Studio Code and navigate to the front-end directory
 
    ```sh
@@ -280,6 +285,11 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
 
 -  Connect your mobile phone using USB cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
 
+-  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and paste the URL endpoint link in the line 6<br />
+   `const baseAPI =`
+   ```sh
+   'https://eu-west-2.aws.data.mongodb-api.com/app/data-kbwda/endpoint/data/v1';
+   ```
 -  Navigate to front-end directory
    ```sh
    cd walkerrr-frontend
@@ -288,11 +298,14 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    ```sh
    flutter pub get
    ```
+   ```sh
+   flutter upgrade
+   ```
 -  Check Flutter installation
    ```sh
    flutter doctor
    ```
--  You can additionaly check connected devices
+-  You can additionally check connected devices
    ```sh
    flutter devices
    ```
