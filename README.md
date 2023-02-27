@@ -261,24 +261,46 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    Remote MongoDB connected...
    ```
 
-### Set up front-end
+### 3. Set up front-end
 
-Connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
+1. Preparations
+
+-  Install Flutter extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) or by searching within VS Code. The Dart extension will be installed automatically, if not already installed.
+-  Install Flutter on your computer
+   ```sh
+   https://docs.flutter.dev/get-started/install
+   ```
+-  Open second terminal in Visual Studio Code and navigate to the front-end directory
+
+   ```sh
+   cd walkerrr-frontend
+   ```
+
+2. Emulating the app
+
+-  Connect your mobile phone using USB cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
 
 -  Navigate to front-end directory
    ```sh
    cd walkerrr-frontend
    ```
--  Install npm
+-  Install updates
    ```sh
-   npm install npm@latest -g
+   flutter pub get
    ```
--  Run flutter
+-  Check Flutter installation
+   ```sh
+   flutter doctor
+   ```
+-  You can additionaly check connected devices
+   ```sh
+   flutter devices
+   ```
+-  Run Flutter and wait for the app to install
    ```sh
    flutter run
    ```
--  Instructions on how to setup your android phone or an emulator can be found here:
-   https://docs.flutter.dev/get-started/install
+   Read [how to use emulator in Visual Studio Code](https://dev.to/dailydevtips1/running-a-flutter-app-on-ios-and-android-emulators-3h33).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
