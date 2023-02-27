@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\course-project\\walkerrr\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\projects\\walkerrr-mobile-app\\walkerrr-frontend\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\jacek\\.gradle\\caches\\transforms-3\\542a859793ec57d6a4d40865c7efc6d9\\transformed\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
@@ -20,23 +20,6 @@
                         "endLines": "7,8,9,10,86,165,169,350,367,375",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "339,399,451,496,5500,11778,11975,21668,22782,23175"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\course-project\\walkerrr\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,712",
-                        "endColumns": "143,81,103,108,119,97,74",
-                        "endOffsets": "194,276,380,489,609,707,782"
-                    },
-                    "to": {
-                        "startLines": "126,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "8973,9332,9414,9518,9627,9747,9845",
-                        "endColumns": "143,81,103,108,119,97,74",
-                        "endOffsets": "9112,9409,9513,9622,9742,9840,9915"
                     }
                 },
                 {
@@ -76,7 +59,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\course-project\\walkerrr\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\projects\\walkerrr-mobile-app\\walkerrr-frontend\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,712",
+                        "endColumns": "143,81,103,108,119,97,74",
+                        "endOffsets": "194,276,380,489,609,707,782"
+                    },
+                    "to": {
+                        "startLines": "126,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "8973,9332,9414,9518,9627,9747,9845",
+                        "endColumns": "143,81,103,108,119,97,74",
+                        "endOffsets": "9112,9409,9513,9622,9742,9840,9915"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\projects\\walkerrr-mobile-app\\walkerrr-frontend\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

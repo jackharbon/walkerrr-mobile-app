@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\course-project\\walkerrr\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\projects\\walkerrr-mobile-app\\walkerrr-frontend\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\course-project\\walkerrr\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\jacek\\OneDrive\\Documents\\_FULL-STACK-DEVELOPER\\Northcoders\\projects\\walkerrr-mobile-app\\walkerrr-frontend\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

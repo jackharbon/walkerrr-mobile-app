@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-9        android:targetSdkVersion="31" />
+9        android:targetSdkVersion="33" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
 12         the Flutter tool needs it to communicate with the running application
@@ -76,7 +76,7 @@
 62            android:name="com.google.firebase.components.ComponentDiscoveryService"
 62-->[:firebase_auth] C:\Users\jacek\OneDrive\Documents\_FULL-STACK-DEVELOPER\Northcoders\projects\walkerrr-mobile-app\walkerrr-frontend\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 63            android:directBootAware="true"
-63-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+63-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:34:13-43
 64            android:exported="false" >
 64-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\jacek\.gradle\caches\transforms-3\0548e507d3019ac84ce4969b57803f45\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:66:13-37
 65            <meta-data
@@ -104,11 +104,11 @@
 76                android:value="com.google.firebase.components.ComponentRegistrar" />
 76-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\jacek\.gradle\caches\transforms-3\bfd20290ff5d39e38453adc1ae5698f7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
 77            <meta-data
-77-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\jacek\.gradle\caches\transforms-3\3fe9d54d7b663dbec51ad86b1763f50a\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+77-->[com.google.firebase:firebase-installations:17.1.2] C:\Users\jacek\.gradle\caches\transforms-3\5dcb539ab6180e04e51869aae48e2df6\transformed\jetified-firebase-installations-17.1.2\AndroidManifest.xml:17:13-19:85
 78                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-78-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\jacek\.gradle\caches\transforms-3\3fe9d54d7b663dbec51ad86b1763f50a\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+78-->[com.google.firebase:firebase-installations:17.1.2] C:\Users\jacek\.gradle\caches\transforms-3\5dcb539ab6180e04e51869aae48e2df6\transformed\jetified-firebase-installations-17.1.2\AndroidManifest.xml:18:17-127
 79                android:value="com.google.firebase.components.ComponentRegistrar" />
-79-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\jacek\.gradle\caches\transforms-3\3fe9d54d7b663dbec51ad86b1763f50a\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+79-->[com.google.firebase:firebase-installations:17.1.2] C:\Users\jacek\.gradle\caches\transforms-3\5dcb539ab6180e04e51869aae48e2df6\transformed\jetified-firebase-installations-17.1.2\AndroidManifest.xml:19:17-82
 80        </service>
 81
 82        <uses-library
@@ -196,17 +196,17 @@
 124        </activity>
 125
 126        <provider
-126-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+126-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:25:9-30:39
 127            android:name="com.google.firebase.provider.FirebaseInitProvider"
-127-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+127-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:26:13-77
 128            android:authorities="com.example.walkerrr.firebaseinitprovider"
-128-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+128-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:27:13-72
 129            android:directBootAware="true"
-129-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+129-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:28:13-43
 130            android:exported="false"
-130-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+130-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:29:13-37
 131            android:initOrder="100" />
-131-->[com.google.firebase:firebase-common:20.2.0] C:\Users\jacek\.gradle\caches\transforms-3\c1f7cd0e68ddf89c76a753ac7fd1a66c\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+131-->[com.google.firebase:firebase-common:20.3.0] C:\Users\jacek\.gradle\caches\transforms-3\ac20124166528b90eb750a9c2aadf745\transformed\jetified-firebase-common-20.3.0\AndroidManifest.xml:30:13-36
 132
 133        <receiver
 133-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\jacek\.gradle\caches\transforms-3\5ec3faad4c67c5d02d41a8d7d7f45ea7\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
