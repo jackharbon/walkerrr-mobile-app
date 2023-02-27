@@ -20,10 +20,11 @@
 		"url": "git+https://github.com/jackharbon/walkerrr-mobile-app.git"
 	},
 	"author": "Merge Conflict - Northcoders Bootcamp team",
-	"license": "ISC",
+	"license": "Northcoders",
 	"bugs": {
 		"url": "https://github.com/jackharbon/walkerrr-mobile-app/issues"
 	},
 	"homepage": "https://github.com/jackharbon/walkerrr-mobile-app#readme",
-	"keywords": []
+	"keywords": [],
+	"devDependencies": {}
 }

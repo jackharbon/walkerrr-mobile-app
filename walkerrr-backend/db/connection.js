@@ -1,17 +1,24 @@
-const mongoose = require("mongoose");
-require("dotenv").config();
+const mongoose = require('mongoose');
+const express = require('express');
+require('dotenv').config();
+mongoose.set('strictQuery', false);
 
-function connectToDb() {
-  const mongoDB = process.env.DATABASE_URL;
+const mongoDB = process.env.DATABASE_URL;
 
-  mongoose.connect(mongoDB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+async function connectToDb() {
+	try {
+		await mongoose.connect(mongoDB, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+		});
+		console.log('Remote MongoDB connected...');
+	} catch (error) {
+		console.error(error.message);
+	}
 
-  const db = mongoose.connection;
+	const db = mongoose.connection;
 
-  return db;
+	return db;
 }
 
 module.exports = { connectToDb };
