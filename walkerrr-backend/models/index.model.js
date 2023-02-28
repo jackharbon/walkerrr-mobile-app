@@ -27,4 +27,4 @@ function changeUserById(id, body) {
 	return user;
 }
 
-module.exports = { insertUser, fetchUserById, deleteUserById, changeUserById };
+module.exports = { insertUser, fetchUsers, fetchUserById, deleteUserById, changeUserById };
