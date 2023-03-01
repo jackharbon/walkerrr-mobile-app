@@ -103,7 +103,7 @@ Our team worked remotely using:
 -  GitHub for version control
 -  Trello board for organising tasks and tickets
 
-### Team's retrospection video on Youtube
+### Team's retrospection video on Youtube and on [metroretro](https://metroretro.io/BO354V8Y6SQ7)
 
 <a href="https://youtu.be/n_24fcZvzug">
     <img src="media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
@@ -162,7 +162,7 @@ Feel free to test the app for yourself (excluding commercial purposes, all right
 
 To run the app you need a few pieces of software. The installation process will depend on your computer operating system (Linux, Mac OS, MS Windows), so I have included general instructions, for more detailed steps you need to read the software provider's instructions (docs) for the specific system. And also I DO NOT recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) (Windows Subsystem for Linux), because of the problems with Android emulation, as WSL does not support GUI applications and SDK for Windows do not work with WSL.
 
-Useful software:
+Install useful software:
 
 -  JavaScript runtime environment [Node.js](https://nodejs.org/en/)
 -  Source code editor like [Visual Studio Code](https://code.visualstudio.com/Download)
@@ -173,7 +173,7 @@ Useful software:
 
 ## Installation
 
-### 1. Host this project locally
+### I. Host this project locally
 
 1. Register your account on GitHub, read this [Docs](https://docs.github.com/en/get-started/quickstart/set-up-git) for settting up Git.
 2. Use "Fork" button in the top right corner of this page to copy this repository to your account.
@@ -198,13 +198,14 @@ Useful software:
    cd walkerrr-mobile-app
    ```
 -  Open Visual Studio Code
+
    ```sh
    code .
    ```
 
-Open Visual Studio Code terminal (`Ctr + '`)
+   Open Visual Studio Code terminal (`Ctr + '`)
 
-### 2. Set up back-end (<i>skip to `3. Set up front-end` if you don't want to modify database schema</i>)
+### II. Set up back-end (<i>skip to `III. Set up front-end` if you don't want to modify database schema</i>)
 
 1. Preparations
 
@@ -228,7 +229,7 @@ Open Visual Studio Code terminal (`Ctr + '`)
 
 2. Database connection
 
-If you need help with those steps, watch YouTube tutorial [How to Connect Node.js App to MongoDB | Node.js & MongoDB Tutorial](https://youtu.be/bhiEJW5poHU) or read [MongoDB docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/).
+   If you need help with those steps, watch YouTube tutorial [How to Connect Node.js App to MongoDB | Node.js & MongoDB Tutorial](https://youtu.be/bhiEJW5poHU) or read [MongoDB docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/).
 
 -  Go to [MongoDB](https://www.mongodb.com/cloud/atlas/register) page and register account (you can sign up with Google).
 -  Create new cluster (database).<br />
@@ -269,7 +270,7 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    /walkerrr-backend
    ```
 
-### 3. Set up front-end
+### III. Set up front-end
 
 1. Preparations
 
@@ -288,10 +289,10 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
 
 -  Connect your mobile phone using USB cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
 
--  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and paste the URL endpoint link in the line 6<br />
+-  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and replace URL endpoint witho your link in the line 5<br />
    `const baseAPI =`
    ```sh
-   'https://eu-west-2.aws.data.mongodb-api.com/app/data-kbwda/endpoint/data/v1';
+   'https://walkerrr-backend.cyclic.app`;
    ```
 -  Navigate to front-end directory
    ```sh

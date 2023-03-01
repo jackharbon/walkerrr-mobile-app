@@ -103,7 +103,7 @@ Our team worked remotely using:
 -  GitHub for version control
 -  Trello board for organising tasks and tickets
 
-### Team's retrospection video on Youtube
+### Team's retrospection video on Youtube and on [metroretro](https://metroretro.io/BO354V8Y6SQ7)
 
 <a href="https://youtu.be/n_24fcZvzug">
     <img src="../media/retro_thumb.jpg" alt="Youtube video screenshot" width="400">
@@ -146,9 +146,9 @@ After login the user can:
 | ------------------------------------------------ | ----------------------------------------- | -------------------------------------- |
 | planning, version control, code editing          | database, authentication, environment     | framework and language                 |
 | [![Figma][figma.com]][figma-url]                 | [![Mongodb][mongodb.com]][mongodb-url]    | [![Flutter][flutter.dev]][flutter-url] |
-| [![GitHub][github.com]][github-url]              | [![Firebase][firebase.com]][firebase-url] | [![Dart][dart.dev]][dart-url]          |
-| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
-| [![Slack][slack.com]][slack-url]                 |                                           |                                        |
+| [![GitHub][github.com]][github-url]              | [![Mongoose][mongoose.com]][mongoose-url] | [![Dart][dart.dev]][dart-url]          |
+| [![VSC][visualstudiocode]][visualstudiocode-url] | [![Firebase][firebase.com]][firebase-url] |                                        |
+| [![Slack][slack.com]][slack-url]                 | [![Node.js][nodejs.org]][nodejs-url]      |                                        |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,7 +162,7 @@ Feel free to test the app for yourself (excluding commercial purposes, all right
 
 To run the app you need a few pieces of software. The installation process will depend on your computer operating system (Linux, Mac OS, MS Windows), so I have included general instructions, for more detailed steps you need to read the software provider's instructions (docs) for the specific system. And also I DO NOT recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) (Windows Subsystem for Linux), because of the problems with Android emulation, as WSL does not support GUI applications and SDK for Windows do not work with WSL.
 
-Useful software:
+Install useful software:
 
 -  JavaScript runtime environment [Node.js](https://nodejs.org/en/)
 -  Source code editor like [Visual Studio Code](https://code.visualstudio.com/Download)
@@ -173,7 +173,7 @@ Useful software:
 
 ## Installation
 
-### 1. Host this project locally
+### I. Host this project locally
 
 1. Register your account on GitHub, read this [Docs](https://docs.github.com/en/get-started/quickstart/set-up-git) for settting up Git.
 2. Use "Fork" button in the top right corner of this page to copy this repository to your account.
@@ -181,58 +181,143 @@ Useful software:
 4. Open a modal window by clicking the green button "<> Code" and copy the link to your fork which looks like this: `https://github.com/your_github_name/walkerrr-mobile-app.git`
 5. Open your Terminal (for Windows read [this](https://github.com/microsoft/terminal) and [this](https://learn.microsoft.com/en-us/windows/terminal/)) and navigate `cd /path/to/folder` to your projects folder.
 
--  check Node.js installation
+-  Check Node.js installation
    ```sh
-   node -v .
+   node -v
    ```
--  check NPM installation
+-  Ceck NPM installation
    ```sh
-   npm -v .
+   npm -v
    ```
--  clone repository to your computer
+-  Clone repository to your computer (change `your_github_name` to your actual GitHub login)
    ```sh
    git clone https://github.com/your_github_name/walkerrr-mobile-app.git
    ```
--  navigate to repo folder
+-  Navigate to repo folder
    ```sh
    cd walkerrr-mobile-app
    ```
--  open Visual Studio Code
+-  Open Visual Studio Code
+
    ```sh
    code .
    ```
 
-### 2. Set up back-end
+   Open Visual Studio Code terminal (`Ctr + '`)
 
-Open Visual Studio Code terminal (`Ctr + '`)
+### II. Set up back-end (<i>skip to `III. Set up front-end` if you don't want to modify database schema</i>)
 
--  navigate to back-end directory
+1. Preparations
+
+-  Navigate to back-end directory
    ```sh
    cd walkerrr-backend
    ```
--  install npm
+-  Update npm and install dependencies
    ```sh
    npm install npm@latest -g
    ```
+   ```sh
+   sudo npm i --save
+   ```
+   ```sh
+   npm fund
+   ```
+   ```sh
+   npm init -y
+   ```
 
-### Set up front-end
+2. Database connection
 
-connect your device or use an emulator and type in the command 'flutter run' in the terminal and wait for the app to install
+   If you need help with those steps, watch YouTube tutorial [How to Connect Node.js App to MongoDB | Node.js & MongoDB Tutorial](https://youtu.be/bhiEJW5poHU) or read [MongoDB docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/).
 
--  navigate to back-end directory
+-  Go to [MongoDB](https://www.mongodb.com/cloud/atlas/register) page and register account (you can sign up with Google).
+-  Create new cluster (database).<br />
+   Goal: "Build a new application".<br />
+   Type of application: f.e. "Web Application".<br />
+   Preferred language: "JavaScript".<br />
+   Click "Finish"
+-  Click "Create" button for free shared database.<br />
+   Give a name "walkerrr" and create cluster.
+-  Create a database user with username "walkerrr" and password (remember the password). Click "Create user" button and "Add My Current IP Adress" and "Finish and Close" below.
+-  Click "Connect" -> "Connect your application" button.
+-  Copy your connection string, the link, which looks like this:
+   ```sh
+   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   ```
+   Replace `<password>` with your password you entered on MongoDB website.
+-  Open the file `.env-example`, save it as `.env` and paste the above link (with the proper password).
+   ```sh
+   DATABASE_URL=mongodb+srv://walkerrr:<PASSWORD>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   ```
+-  Open Visual Studio Code terminal (check if you are in `walkerrr-backend` folder), type
+   ```sh
+   npm start
+   ```
+-  If everything went fine you will get confirmation messages
+   ```sh
+   Listening on port 9095...
+   ```
+   ```sh
+   Remote MongoDB connected...
+   ```
+
+3. Deploy back-end
+
+-  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
+-  Add your GitHub repo, edit root and output path
+   ```sh
+   /walkerrr-backend
+   ```
+
+### III. Set up front-end
+
+1. Preparations
+
+-  Install Flutter on your computer
+   ```sh
+   https://docs.flutter.dev/get-started/install
+   ```
+-  Install Flutter extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) or by searching within VS Code. The Dart extension will be installed automatically, if not already installed.
+-  Open second terminal in Visual Studio Code and navigate to the front-end directory
+
    ```sh
    cd walkerrr-frontend
    ```
--  install npm
+
+2. Emulating the app
+
+-  Connect your mobile phone using USB cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
+
+-  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and replace URL endpoint witho your link in the line 5<br />
+   `const baseAPI =`
    ```sh
-   npm install npm@latest -g
+   'https://walkerrr-backend.cyclic.app`;
    ```
--  run flutter
+-  Navigate to front-end directory
+   ```sh
+   cd walkerrr-frontend
+   ```
+-  Install updates
+   ```sh
+   flutter pub get
+   ```
+   ```sh
+   flutter upgrade
+   ```
+-  Check Flutter installation
+   ```sh
+   flutter doctor
+   ```
+-  You can additionally check connected devices
+   ```sh
+   flutter devices
+   ```
+-  Run Flutter and wait for the app to install
    ```sh
    flutter run
    ```
--  instructions on how to setup your android phone or an emulator can be found here:
-   https://docs.flutter.dev/get-started/install
+   Read [how to use emulator in Visual Studio Code](https://dev.to/dailydevtips1/running-a-flutter-app-on-ios-and-android-emulators-3h33).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -275,7 +360,8 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 
 -  [Northcoders](https://northcoders.com)
 -  [Firebase](https://firebase.google.com/docs/auth)
--  [Mongo DB](https://www.mongodb.com/)
+-  [Mongo DB](https://www.mongodb.com/docs/drivers/node/current/)
+-  [Mongoose](https://mongoosejs.com/docs/index.html)
 -  [Cyclic](https://www.cyclic.sh/)
 -  [Node.js](https://nodejs.org/en/)
 -  [NPM.js](https://www.npmjs.com/)
@@ -286,6 +372,7 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 -  [Android Studio](https://developer.android.com/studio)
 -  [Material Design](https://m3.material.io/)
 -  [Netlify](https://app.netlify.com/signup/start)
+-  [Render](https://render.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -317,6 +404,8 @@ Project Link: [https://github.com/jackharbon/walkerrr-mobile-app](https://github
 [firebase-url]: https://firebase.com/
 [mongodb.com]: https://img.shields.io/badge/Mongodb-3F2C1B?style=for-the-badge&logo=mongodb&logoColor=62AC53
 [mongodb-url]: https://mongodb.com/
+[mongoose.com]: https://img.shields.io/badge/mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white
+[mongoose-url]: https://mongoose.com/
 [nodejs.org]: https://img.shields.io/badge/node.js-7EBB00?style=for-the-badge&logo=nodedotjs&logoColor=313429
 [nodejs-url]: https://nodejs.org/
 [visualstudiocode]: https://img.shields.io/badge/visualstudio-3CA4EA?style=for-the-badge&logo=visualstudio&logoColor=white
