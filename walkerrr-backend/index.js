@@ -2,6 +2,7 @@ const express = require('express');
 const { postUser, getUserById, removeUser, patchUserById } = require('./controllers/index.controller');
 const app = express();
 const cors = require('cors');
+const { User } = require('./models/User');
 
 app.use(express.json());
 app.use(cors());
