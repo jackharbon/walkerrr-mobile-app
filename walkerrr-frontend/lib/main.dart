@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:walkerrr/common/styling_variables.dart';
 import 'package:walkerrr/auth.dart';

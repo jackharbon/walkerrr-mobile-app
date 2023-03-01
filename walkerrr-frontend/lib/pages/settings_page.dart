@@ -693,7 +693,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    print(height);
+    // print(height);
     List<Widget> _pages = <Widget>[
       const MainPedometer(), //Page 0
       const QuestList(),
