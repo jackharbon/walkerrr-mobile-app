@@ -269,6 +269,10 @@ Install useful software:
    ```sh
    /walkerrr-backend
    ```
+-  Add new variable `MONGO_URI` and paste the value (replace `password` with your password)
+   ```sh
+   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   ```
 
 ### III. Set up front-end
 
