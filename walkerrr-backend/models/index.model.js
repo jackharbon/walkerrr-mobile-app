@@ -7,11 +7,6 @@ function insertUser(user) {
 	return newUser.save();
 }
 
-function fetchUsers() {
-	const users = User.find();
-	return users;
-}
-
 function fetchUserById(id) {
 	const user = User.find({ uid: id });
 	return user;
@@ -27,4 +22,4 @@ function changeUserById(id, body) {
 	return user;
 }
 
-module.exports = { insertUser, fetchUsers, fetchUserById, deleteUserById, changeUserById };
+module.exports = { insertUser, fetchUserById, deleteUserById, changeUserById };

@@ -1,13 +1,4 @@
-const { insertUser, fetchUsers, fetchUserById, deleteUserById, changeUserById } = require('../models/index.model');
-
-exports.getUsers = (req, res, next) => {
-	const { user_id } = req.params;
-	fetchUsers()
-		.then((users) => {
-			res.send(users);
-		})
-		.catch(next);
-};
+const { insertUser, fetchUserById, deleteUserById, changeUserById } = require('../models/index.model');
 
 exports.getUserById = (req, res, next) => {
 	const { user_id } = req.params;
