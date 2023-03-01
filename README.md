@@ -232,14 +232,14 @@ Install useful software:
    If you need help with those steps, watch YouTube tutorial [How to Connect Node.js App to MongoDB | Node.js & MongoDB Tutorial](https://youtu.be/bhiEJW5poHU) or read [MongoDB docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/).
 
 -  Go to [MongoDB](https://www.mongodb.com/cloud/atlas/register) page and register account (you can sign up with Google).
--  Create new cluster (database).<br />
+-  [Create new cluster ](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup#:~:text=Creating%20a%20MongoDB%20Cluster%201%20Log%20in%20to,provider%20and%20region.%205%20Click%20on%20%E2%80%9CCreate%20cluster.%E2%80%9D)(database).<br />
    Goal: "Build a new application".<br />
    Type of application: f.e. "Web Application".<br />
    Preferred language: "JavaScript".<br />
    Click "Finish"
 -  Click "Create" button for free shared database.<br />
    Give a name "walkerrr" and create cluster.
--  Create a database user with username "walkerrr" and password (remember the password). Click "Create user" button and "Add My Current IP Adress" and "Finish and Close" below.
+-  Create a database user with username "walkerrr" and password (remember the password). Click "Create user" button and "Add My Current IP Address" and "Finish and Close" below.
 -  Click "Connect" -> "Connect your application" button.
 -  Copy your connection string, the link, which looks like this:
    ```sh
@@ -265,11 +265,11 @@ Install useful software:
 3. Deploy back-end
 
 -  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
--  Add your GitHub repo, edit root and output path
+-  Add Add your GitHub repo `walkerrr-mobile-app` (watch [example on YouTube](https://www.youtube.com/watch?v=UnhTGEtOD6M) if you need help), edit root and output path
    ```sh
    /walkerrr-backend
    ```
--  Add new variable `MONGO_URI` and paste the value (replace `password` with your password)
+-  Create new variable named `MONGO_URI` and paste the value (replace `password` with your password), you can watch [example on YouTube](https://www.youtube.com/watch?v=qGtEPIbB-7k) or [YouTube video](https://youtu.be/W5ybio3wVJQ) presenting whole process.
    ```sh
    mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
