@@ -13,8 +13,7 @@ app.get('/', (req, res) => {
 app.get('/api/users', (req, res) => {
 	const users = User.find();
 	if (users) {
-		const response = users.json();
-		res.send(response);
+		res.json(users);
 	} else {
 		res.status(404).send({ message: 'No users found' });
 	}
