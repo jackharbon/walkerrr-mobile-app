@@ -264,9 +264,9 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
 3. Deploy back-end
 
 -  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
--  Add your GitHub repo, edit root and path
+-  Add your GitHub repo, edit root and output path
    ```sh
-   npm start
+   /walkerrr-backend
    ```
 
 ### 3. Set up front-end
