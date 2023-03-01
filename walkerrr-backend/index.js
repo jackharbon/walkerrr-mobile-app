@@ -6,6 +6,9 @@ const cors = require('cors');
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+	res.send('Walkerrr app backend');
+});
 app.get('/api/users', getUsers);
 app.get('/api/users/:user_id', getUserById);
 app.post('/api/users', postUser);
