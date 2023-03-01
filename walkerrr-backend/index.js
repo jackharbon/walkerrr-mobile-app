@@ -10,8 +10,8 @@ app.use(cors());
 app.get('/', (req, res) => {
 	res.send('Walkerrr app backend');
 });
-app.get('/api/users', (req, res) => {
-	const users = User.find();
+app.get('/api/users', async (req, res) => {
+	const users = await User.find();
 	if (users) {
 		res.json(users);
 	} else {
