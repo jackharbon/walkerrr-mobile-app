@@ -2,8 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:walkerrr/providers/user_provider.dart';
 
-const baseAPI =
-    'https://eu-west-2.aws.data.mongodb-api.com/app/data-kbwda/endpoint/data/v1';
+const baseAPI = 'https://walkerrr-backend.cyclic.app';
 
 Future<void> postUser(postedEmail, uid, displayname) async {
   final url = Uri.http(baseAPI, '/api/users');
