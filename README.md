@@ -274,12 +274,9 @@ Install useful software:
 
 1. Preparations
 
--  Install Flutter on your computer
-   ```sh
-   https://docs.flutter.dev/get-started/install
-   ```
+-  Install [Flutter](https://docs.flutter.dev/get-started/install) on your computer
 -  Install Flutter extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) or by searching within VS Code. The Dart extension will be installed automatically, if not already installed.
--  Open second terminal in Visual Studio Code and navigate to the front-end directory
+-  Open terminal (`Ctr + '`) in Visual Studio Code and navigate to the front-end directory
 
    ```sh
    cd walkerrr-frontend
@@ -287,9 +284,9 @@ Install useful software:
 
 2. Emulating the app
 
--  Connect your mobile phone using USB cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
+-  [Connect your mobile phone using USB](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/remote-debugging/) cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
 
--  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and replace URL endpoint witho your link in the line 5<br />
+-  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and replace URL endpoint with your link in the line 5<br />
    `const baseAPI =`
    ```sh
    'https://walkerrr-backend.cyclic.app`;
