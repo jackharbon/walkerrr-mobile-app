@@ -204,7 +204,7 @@ Useful software:
 
 Open Visual Studio Code terminal (`Ctr + '`)
 
-### 2. Set up back-end
+### 2. Set up back-end (<i>skip to `3. Set up front-end` if you don't want to modify database schema</i>)
 
 1. Preparations
 
@@ -244,15 +244,10 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    ```sh
    mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
-   Replace `<password>` with your password.
+   Replace `<password>` with your password you entered on MongoDB website.
 -  Open the file `.env-example`, save it as `.env` and paste the above link (with the proper password).
    ```sh
    DATABASE_URL=mongodb+srv://walkerrr:<PASSWORD>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
-   ```
--  Go to "Data API" card in "Services" MongoDB panel's section, select database name ("walkerrr") from the list and click "Enable Data Access from the Data API" green button.
--  Copy database URL endpoint link, which looks like this:
-   ```sh
-   https://eu-west-2.aws.data.mongodb-api.com/app/data-kbwda/endpoint/data/v1
    ```
 -  Open Visual Studio Code terminal (check if you are in `walkerrr-backend` folder), type
    ```sh
@@ -264,6 +259,14 @@ If you need help with those steps, watch YouTube tutorial [How to Connect Node.j
    ```
    ```sh
    Remote MongoDB connected...
+   ```
+
+3. Deploy back-end
+
+-  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
+-  Add your GitHub repo, edit root and path
+   ```sh
+   npm start
    ```
 
 ### 3. Set up front-end
