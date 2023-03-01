@@ -1,12 +1,12 @@
-const app = require("./app");
-const { connectToDb } = require("./db/connection");
+const app = require('.');
+const { connectToDb } = require('./db/connection');
 
 const PORT = 9095;
-let db = "";
+let db = '';
 
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
-  db = connectToDb();
+	console.log(`Listening on port ${PORT}...`);
+	db = connectToDb();
 });
 
 module.exports = db;

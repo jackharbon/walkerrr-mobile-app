@@ -7,9 +7,9 @@
 		"nodemon": "^2.0.20"
 	},
 	"name": "walkerrr-backend",
-	"description": "Wallkerrr is an app that makes walking more exciting by adding an rpg element to it",
+	"description": "Walkerrr is an app that makes walking more exciting by adding an rpg element to it",
 	"version": "1.0.0",
-	"main": "app.js",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node listen.js",
