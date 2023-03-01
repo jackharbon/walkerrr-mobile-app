@@ -9,12 +9,12 @@ app.use(cors());
 app.get('/', (req, res) => {
 	res.send('Walkerrr app backend');
 });
-app.get('/api/users', async (req, res) => {
-	const users = await User.find();
+app.get('/api/users', (req, res) => {
+	const users = User.find();
 	if (users) {
-		res(users);
+		res.send(users);
 	} else {
-		res.status(404).json({ message: 'No users found' });
+		res.status(404).send({ message: 'No users found' });
 	}
 });
 app.get('/api/users/:user_id', getUserById);
