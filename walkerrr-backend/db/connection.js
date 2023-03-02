@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 require('dotenv').config();
 mongoose.set('strictQuery', false);
-const newUser = require('../db/db');
+// const newUser = require('../db/db');
 
 const mongoDB = process.env.MONGO_URI;
 

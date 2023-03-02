@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 app.get('/api/users', async (req, res) => {
 	const users = await User.find();
-	if (users) {
+	if (users.length !== 0) {
 		res.json(users);
 	} else {
 		res.status(404).send({ message: 'No users found' });
