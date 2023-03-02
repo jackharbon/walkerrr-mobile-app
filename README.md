@@ -285,10 +285,20 @@ Install useful software:
    ```sh
    ./walkerrr-backend
    ```
--  Create new variable named `MONGO_URI` and paste the value (replace `password` with your password), you can watch [example on YouTube](https://www.youtube.com/watch?v=qGtEPIbB-7k) or [YouTube video](https://youtu.be/W5ybio3wVJQ) presenting whole process.
+-  Build Command:
+   ```sh
+   npm
+   ```
+-  Start command:
+   ```sh
+   node server.js
+   ```
+-  Click blue button at the bottom "Create Web Service".
+-  Go to "Environment" tab and create new "Environment Variables" named `MONGO_URI` and paste the value (replace `password` with your password).
    ```sh
    mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
+-  Check "Events" tab for latest deployments.
 
 ### III. Set up front-end
 
