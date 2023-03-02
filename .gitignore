@@ -47,3 +47,4 @@ node_modules
 .env.*
 .env
 walkerrr-frontend/build/app/intermediates/desugar_graph/debug/out/currentProject
+package-lock.json
