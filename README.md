@@ -268,7 +268,7 @@ Install useful software:
    Remote MongoDB connected...
    ```
 
-3. Deploy back-end (Cyclic)
+3. A. Deploy back-end (Cyclic) or go to B. if you prefer Render.
 
 -  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
 -  Add your GitHub repo `walkerrr-mobile-app` (watch [example on YouTube](https://www.youtube.com/watch?v=UnhTGEtOD6M) if you need help).
@@ -281,7 +281,7 @@ Install useful software:
    "mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority"
    ```
 
-3. Deploy back-end (Render)
+3. B. Deploy back-end (Render)
 
 -  Go to the [Render](https://render.com/) website click "GET STARTED FOR FREE" and sign up with your GitHub account. In "Overview" choose "New Web Service" (you can watch YouTube [video tutorial](https://youtu.be/68ubggfsQlE) or read [this](https://www.freecodecamp.org/news/how-to-deploy-nodejs-application-with-render/) tutorial).
 -  Connect to your GitHub repo `walkerrr-mobile-app`.
@@ -301,7 +301,7 @@ Install useful software:
    ```
 -  Click "Advanced" tab and create new "Environment Variables" named `MONGO_URI` and paste the value (replace `password` with your password).
    ```sh
-   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   "mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority"
    ```
 -  Click blue button at the bottom "Create Web Service".
 -  Check "Events" tab for latest deployments.
