@@ -16,13 +16,13 @@ app.get('/', (req, res) => {
 	res.send('Walkerrr app backend');
 });
 app.get('/api/users', async (req, res) => {
-	const users = await User.find();
-	console.log('🚀 -> app.get -> users:', users);
-	if (users) {
-		res.json(users);
-	} else {
-		res.status(404).send({ message: 'No users found' });
-	}
+	res.send('testing answer for /api/users');
+	// const users = await User.find();
+	// if (users) {
+	// 	res.json(users);
+	// } else {
+	// 	res.status(404).send({ message: 'No users found' });
+	// }
 });
 app.get('/api/users/:user_id', getUserById);
 app.post('/api/users', postUser);
