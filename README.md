@@ -239,7 +239,13 @@ Install useful software:
    Click "Finish"
 -  Click "Create" button for free shared database.<br />
    Give a name "walkerrr" and create cluster.
--  Create a database user with username "walkerrr" and password (remember the password). Click "Create user" button and "Add My Current IP Address" and "Finish and Close" below.
+-  Create a database user with username "walkerrr" and password (remember the password), click "Create user".
+-  Add address IP to allowed IPs. Adding the CIDR 0.0.0.0/0 allows access from anywhere. Ensure that strong credentials (username and password) are used for all database users when allowing access from anywhere.
+   ```sh
+   0.0.0.0/0
+   ```
+   Choose Cloud access/Advanced.<br />
+   Click "Finish and Close" below.
 -  Click "Connect" -> "Connect your application" button.
 -  Copy your connection string, the link, which looks like this:
    ```sh
@@ -283,7 +289,7 @@ Install useful software:
    Name: `walkerrr-backend`<br  />
 -  Root Directory:
    ```sh
-   ./walkerrr-backend
+   walkerrr-backend
    ```
 -  Build Command:
    ```sh
