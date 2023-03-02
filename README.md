@@ -243,12 +243,12 @@ Install useful software:
 -  Click "Connect" -> "Connect your application" button.
 -  Copy your connection string, the link, which looks like this:
    ```sh
-   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   "mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority"
    ```
    Replace `<password>` with your password you entered on MongoDB website.
 -  Open the file `.env-example`, save it as `.env` and paste the above link (with the proper password).
    ```sh
-   DATABASE_URL=mongodb+srv://walkerrr:<PASSWORD>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   "DATABASE_URL=mongodb+srv://walkerrr:<PASSWORD>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority"
    ```
 -  Open Visual Studio Code terminal (check if you are in `walkerrr-backend` folder), type
    ```sh
@@ -272,7 +272,7 @@ Install useful software:
    ```
 -  Create new variable named `MONGO_URI` and paste the value (replace `password` with your password), you can watch [example on YouTube](https://www.youtube.com/watch?v=qGtEPIbB-7k) or [YouTube video](https://youtu.be/W5ybio3wVJQ) presenting whole process.
    ```sh
-   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   "mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority"
    ```
 
 3. Deploy back-end (Render)
