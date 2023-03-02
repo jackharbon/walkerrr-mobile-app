@@ -15,12 +15,24 @@ async function addUser() {
 	}
 }
 
+async function findUser() {
+	try {
+		const fetchedUser = await User.find({ uid: '01' });
+		console.log(fetchedUser);
+
+		return fetchedUser;
+	} catch (error) {
+		console.error(error.message);
+	}
+}
+
 async function updateUser() {
 	try {
-		const updatedUser = await User.findOne({ displayName: 'User 01' });
-		console.log(updatedUser);
+		const updatedUser = await User.findOne({ displayName: 'User 01 new' });
+		console.log('findOne User 01 new ->', updatedUser.displayName);
+		updatedUser.displayName = 'User 01';
 		await updatedUser.save();
-		console.log(updatedUser);
+		console.log('save User 01 ->', updatedUser.displayName);
 
 		return updatedUser;
 	} catch (error) {
@@ -52,8 +64,9 @@ async function namedEmail06() {
 }
 
 // addUser();
-updateUser();
+// findUser();
+// updateUser();
 // findAll();
 // namedEmail06();
 
-module.exports = { addUser, updateUser, findAll, namedEmail06 };
+module.exports = { addUser, findUser, updateUser, findAll, namedEmail06 };

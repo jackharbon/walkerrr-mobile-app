@@ -3,7 +3,8 @@
 		"cors": "^2.8.5",
 		"dotenv": "^16.0.3",
 		"express": "^4.18.2",
-		"mongoose": "^6.8.0",
+		"mongodb": "^5.1.0",
+		"mongoose": "^6.10.0",
 		"nodemon": "^2.0.20"
 	},
 	"name": "walkerrr-backend",
@@ -25,6 +26,5 @@
 		"url": "https://github.com/jackharbon/walkerrr-mobile-app/issues"
 	},
 	"homepage": "https://github.com/jackharbon/walkerrr-mobile-app#readme",
-	"keywords": [],
-	"devDependencies": {}
+	"keywords": []
 }

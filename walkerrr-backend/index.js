@@ -4,6 +4,11 @@ const app = express();
 const cors = require('cors');
 const { User } = require('./models/User');
 
+// ! testing new lines
+const bodyParser = require('body-parser');
+app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(express.json());
 app.use(cors());
 
@@ -11,7 +16,8 @@ app.get('/', (req, res) => {
 	res.send('Walkerrr app backend');
 });
 app.get('/api/users', async (req, res) => {
-	const users = await User.findOne();
+	const users = await User.find();
+	console.log('🚀 -> app.get -> users:', users);
 	if (users) {
 		res.json(users);
 	} else {
