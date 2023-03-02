@@ -3,9 +3,9 @@ const { User } = require('../models/User');
 async function addUser() {
 	try {
 		const newUser = await User.create({
-			email: '06@u.uk',
-			displayName: 'User 06',
-			uid: '06',
+			email: '01@u.uk',
+			displayName: 'User 01',
+			uid: '01',
 		});
 		console.log(newUser);
 
@@ -63,10 +63,10 @@ async function namedEmail06() {
 	}
 }
 
-// addUser();
+addUser();
 // findUser();
 // updateUser();
-findAll();
+// findAll();
 // namedEmail06();
 
 module.exports = { addUser, findUser, updateUser, findAll, namedEmail06 };
