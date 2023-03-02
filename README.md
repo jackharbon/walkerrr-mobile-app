@@ -283,7 +283,7 @@ Install useful software:
 
 3. Deploy back-end (Render)
 
--  Go to the [Render](https://render.com/) website click "GET STARTED FOR FREE" and sign up with your GitHub account. In "Overview" choose "New Web Service" (you can watch YouTube [video tutorial](https://youtu.be/68ubggfsQlE)).
+-  Go to the [Render](https://render.com/) website click "GET STARTED FOR FREE" and sign up with your GitHub account. In "Overview" choose "New Web Service" (you can watch YouTube [video tutorial](https://youtu.be/68ubggfsQlE) or read [this](https://www.freecodecamp.org/news/how-to-deploy-nodejs-application-with-render/) tutorial).
 -  Connect to your GitHub repo `walkerrr-mobile-app`.
 -  In dashboard fulfill form fields:<br />
    Name: `walkerrr-backend`<br  />
@@ -293,17 +293,17 @@ Install useful software:
    ```
 -  Build Command:
    ```sh
-   yarn install --ignore-engines
+   npm install
    ```
 -  Start command:
    ```sh
    node server.js
    ```
--  Click blue button at the bottom "Create Web Service".
--  Go to "Environment" tab and create new "Environment Variables" named `MONGO_URI` and paste the value (replace `password` with your password).
+-  Click "Advanced" tab and create new "Environment Variables" named `MONGO_URI` and paste the value (replace `password` with your password).
    ```sh
    mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
    ```
+-  Click blue button at the bottom "Create Web Service".
 -  Check "Events" tab for latest deployments.
 
 ### III. Set up front-end
