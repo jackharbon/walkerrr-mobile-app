@@ -265,7 +265,8 @@ Install useful software:
 3. Deploy back-end
 
 -  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
--  Add Add your GitHub repo `walkerrr-mobile-app` (watch [example on YouTube](https://www.youtube.com/watch?v=UnhTGEtOD6M) if you need help), edit root and output path
+-  Add Add your GitHub repo `walkerrr-mobile-app` (watch [example on YouTube](https://www.youtube.com/watch?v=UnhTGEtOD6M) if you need help).
+-  Edit "Environment" -> "Build Options": add "Root Path" and "Output Path"
    ```sh
    /walkerrr-backend
    ```
