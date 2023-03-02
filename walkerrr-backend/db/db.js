@@ -63,10 +63,10 @@ async function namedEmail06() {
 	}
 }
 
-addUser();
+// addUser();
 // findUser();
 // updateUser();
-// findAll();
+findAll();
 // namedEmail06();
 
 module.exports = { addUser, findUser, updateUser, findAll, namedEmail06 };

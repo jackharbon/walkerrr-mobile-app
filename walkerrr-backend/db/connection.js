@@ -4,7 +4,7 @@ require('dotenv').config();
 mongoose.set('strictQuery', false);
 const newUser = require('../db/db');
 
-const mongoDB = process.env.DATABASE_URL;
+const mongoDB = process.env.MONGO_URI;
 
 async function connectToDb() {
 	try {
