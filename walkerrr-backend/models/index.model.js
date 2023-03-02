@@ -32,7 +32,8 @@ async function changeUserById(id, body) {
 	user.quests = quests;
 	user.equippedArmour = equippedArmour;
 	await user.save();
-	return user;
+	const updatedUser = await User.find({ uid: id });
+	return updatedUser;
 }
 
 module.exports = { insertUser, fetchUserById, deleteUserById, changeUserById };
