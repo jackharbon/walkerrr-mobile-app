@@ -281,13 +281,13 @@ Install useful software:
 -  Connect to your GitHub repo `walkerrr-mobile-app`.
 -  In dashboard fulfill form fields:<br />
    Name: `walkerrr-backend`<br  />
-   Root Directory:
+-  Root Directory:
    ```sh
    ./walkerrr-backend
    ```
 -  Build Command:
    ```sh
-   npm
+   yarn install --ignore-engines
    ```
 -  Start command:
    ```sh
