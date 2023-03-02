@@ -17,12 +17,11 @@ app.get('/', (req, res) => {
 });
 app.get('/api/users', async (req, res) => {
 	const users = await User.find();
-	res.json(users);
-	// if (users) {
-	// 	res.json(users);
-	// } else {
-	// 	res.status(404).send({ message: 'No users found' });
-	// }
+	if (users) {
+		res.json(users);
+	} else {
+		res.status(404).send({ message: 'No users found' });
+	}
 });
 app.get('/api/users/:user_id', getUserById);
 app.post('/api/users', postUser);

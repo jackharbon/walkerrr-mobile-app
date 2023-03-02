@@ -1,4 +1,4 @@
-const app = require('.');
+const app = require('./app');
 const { connectToDb } = require('./db/connection');
 
 const PORT = 9095;
