@@ -262,13 +262,28 @@ Install useful software:
    Remote MongoDB connected...
    ```
 
-3. Deploy back-end
+3. Deploy back-end (Cyclic)
 
 -  Go to the [Cyclic](https://www.cyclic.sh/) website and sign up with your GitHub account.
--  Add Add your GitHub repo `walkerrr-mobile-app` (watch [example on YouTube](https://www.youtube.com/watch?v=UnhTGEtOD6M) if you need help).
+-  Add your GitHub repo `walkerrr-mobile-app` (watch [example on YouTube](https://www.youtube.com/watch?v=UnhTGEtOD6M) if you need help).
 -  Edit "Environment" -> "Build Options": add "Root Path" and "Output Path"
    ```sh
    /walkerrr-backend
+   ```
+-  Create new variable named `MONGO_URI` and paste the value (replace `password` with your password), you can watch [example on YouTube](https://www.youtube.com/watch?v=qGtEPIbB-7k) or [YouTube video](https://youtu.be/W5ybio3wVJQ) presenting whole process.
+   ```sh
+   mongodb+srv://walkerrr:<password>@walkerrr.vvwslic.mongodb.net/?retryWrites=true&w=majority
+   ```
+
+3. Deploy back-end (Render)
+
+-  Go to the [Render](https://render.com/) website click "GET STARTED FOR FREE" and sign up with your GitHub account. In "Overview" choose "New Web Service" (you can watch YouTube [video tutorial](https://youtu.be/68ubggfsQlE)).
+-  Connect to your GitHub repo `walkerrr-mobile-app`.
+-  In dashboard fulfill form fields:<br />
+   Name: `walkerrr-backend`<br  />
+   Root Directory:
+   ```sh
+   ./walkerrr-backend
    ```
 -  Create new variable named `MONGO_URI` and paste the value (replace `password` with your password), you can watch [example on YouTube](https://www.youtube.com/watch?v=qGtEPIbB-7k) or [YouTube video](https://youtu.be/W5ybio3wVJQ) presenting whole process.
    ```sh
