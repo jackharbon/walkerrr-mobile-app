@@ -4,7 +4,7 @@ exports.getUserById = (req, res, next) => {
 	const { user_id } = req.params;
 	fetchUserById(user_id)
 		.then((user) => {
-			res.send(user);
+			res.status(200).send(user);
 		})
 		.catch(next);
 };
@@ -22,7 +22,7 @@ exports.removeUser = (req, res, next) => {
 	const { user_id } = req.params;
 	deleteUserById(user_id)
 		.then((user) => {
-			res.send(user);
+			res.status(204).send({ message: 'User deleted' });
 		})
 		.catch(next);
 };
@@ -32,7 +32,7 @@ exports.patchUserById = (req, res, next) => {
 	const body = req.body;
 	changeUserById(user_id, body)
 		.then((user) => {
-			res.send(user);
+			res.status(200).send(user);
 		})
 		.catch(next);
 };
