@@ -2,23 +2,36 @@ const mongoose = require('mongoose');
 const db = require('../db/connection');
 const { User } = require('./User');
 
-function insertUser(user) {
+async function insertUser(user) {
 	const newUser = new User(user);
 	return newUser.save();
 }
 
-function fetchUserById(id) {
-	const user = User.find({ uid: id });
+async function fetchUserById(id) {
+	const user = await User.find({ uid: id });
 	return user;
 }
 
-function deleteUserById(id) {
-	const user = User.findOneAndDelete({ uid: id });
+async function deleteUserById(id) {
+	const user = await User.findOneAndDelete({ uid: id });
 	return user;
 }
 
-function changeUserById(id, body) {
-	const user = User.findOneAndUpdate({ uid: id }, body);
+// async function changeUserById(id, body) {
+// 	const user = await User.findOneAndUpdate({ uid: id }, body);
+// 	return user;
+// }
+
+async function changeUserById(id, body) {
+	const { email, displayName, coins, trophies, quests, equippedArmour } = body;
+	const user = await User.find({ uid: id });
+	user.email = email;
+	user.displayName = displayName;
+	user.coins = coins;
+	user.trophies = trophies;
+	user.quests = quests;
+	user.equippedArmour = equippedArmour;
+	await user.save();
 	return user;
 }
 
