@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
 	res.send('Walkerrr app backend');
 });
 app.get('/api/users', async (req, res) => {
-	res.send('testing answer for /api/users');
-	// const users = await User.find();
+	const users = await User.find();
+	res.json(users);
 	// if (users) {
 	// 	res.json(users);
 	// } else {
