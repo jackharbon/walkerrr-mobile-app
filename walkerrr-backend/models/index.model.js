@@ -7,18 +7,18 @@ function insertUser(user) {
 	return newUser.save();
 }
 
-async function fetchUserById(id) {
-	const user = await User.find({ uid: id });
+function fetchUserById(id) {
+	const user = User.find({ uid: id });
 	return user;
 }
 
-async function deleteUserById(id) {
-	const user = await User.findOneAndDelete({ uid: id });
+function deleteUserById(id) {
+	const user = User.findOneAndDelete({ uid: id });
 	return user;
 }
 
-async function changeUserById(id, body) {
-	const user = await User.findOneAndUpdate({ uid: id }, body);
+function changeUserById(id, body) {
+	const user = User.findOneAndUpdate({ uid: id }, body);
 	return user;
 }
 
