@@ -28,12 +28,15 @@ async function findUser() {
 
 async function updateUser() {
 	try {
-		const updatedUser = await User.findOne({ displayName: 'User 01 new' });
-		console.log('findOne User 01 new ->', updatedUser.displayName);
-		updatedUser.displayName = 'User 01';
-		await updatedUser.save();
-		console.log('save User 01 ->', updatedUser.displayName);
-
+		const user = await User.findOne({ uid: '01' });
+		user.email = '01@u.uk';
+		user.displayName = 'Luuuuk Skywalker';
+		user.coins = '1000';
+		user.trophies = ['Falcon', 'R2D2'];
+		user.quests = ['Save Fiona'];
+		user.equippedArmour = 'Laser Sword';
+		await user.save();
+		const updatedUser = await User.find({ uid: '01' });
 		return updatedUser;
 	} catch (error) {
 		console.error(error.message);
@@ -65,7 +68,7 @@ async function namedEmail06() {
 
 // addUser();
 // findUser();
-// updateUser();
+updateUser();
 findAll();
 // namedEmail06();
 
