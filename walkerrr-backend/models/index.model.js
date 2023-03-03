@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const db = require('../db/connection');
 const { User } = require('./User');
 
-async function insertUser(user) {
-	const newUser = new User(user);
-	return newUser.save();
+async function fetchAllUsers() {
+	const users = await User.find();
+	return users;
 }
 
 async function fetchUserById(id) {
@@ -12,15 +12,15 @@ async function fetchUserById(id) {
 	return user;
 }
 
+async function insertUser(user) {
+	const newUser = new User(user);
+	return newUser.save();
+}
+
 async function deleteUserById(id) {
 	const user = await User.findOneAndDelete({ uid: id });
 	return user;
 }
-
-// async function changeUserById(id, body) {
-// 	const user = await User.findOneAndUpdate({ uid: id }, body);
-// 	return user;
-// }
 
 async function changeUserById(id, body) {
 	const { email, displayName, coins, trophies, quests, equippedArmour } = body;
@@ -36,4 +36,4 @@ async function changeUserById(id, body) {
 	return updatedUser;
 }
 
-module.exports = { insertUser, fetchUserById, deleteUserById, changeUserById };
+module.exports = { insertUser, fetchAllUsers, fetchUserById, deleteUserById, changeUserById };

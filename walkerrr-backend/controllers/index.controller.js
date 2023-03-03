@@ -1,4 +1,16 @@
-const { insertUser, fetchUserById, deleteUserById, changeUserById } = require('../models/index.model');
+const { insertUser, fetchAllUsers, fetchUserById, deleteUserById, changeUserById } = require('../models/index.model');
+
+exports.getAllUsers = (req, res, next) => {
+	fetchAllUsers()
+		.then((users) => {
+			if (users.length !== 0) {
+				res.status(200).json(users);
+			} else {
+				res.status(404).send({ message: 'No users found' });
+			}
+		})
+		.catch(next);
+};
 
 exports.getUserById = (req, res, next) => {
 	const { user_id } = req.params;

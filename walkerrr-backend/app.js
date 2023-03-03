@@ -1,10 +1,9 @@
 const express = require('express');
-const { postUser, getUserById, removeUser, patchUserById } = require('./controllers/index.controller');
+const { postUser, getAllUsers, getUserById, removeUser, patchUserById } = require('./controllers/index.controller');
 const app = express();
 const cors = require('cors');
 const { User } = require('./models/User');
 
-// ! testing new lines
 const bodyParser = require('body-parser');
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,16 +12,17 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-	res.send('Walkerrr app backend');
+	res.status(200).send({ message: 'Walkerrr app backend ready' });
 });
-app.get('/api/users', async (req, res) => {
-	const users = await User.find();
-	if (users.length !== 0) {
-		res.status(200).json(users);
-	} else {
-		res.status(404).send({ message: 'No users found' });
-	}
-});
+// app.get('/api/users', async (req, res) => {
+// 	const users = await User.find();
+// 	if (users.length !== 0) {
+// 		res.status(200).json(users);
+// 	} else {
+// 		res.status(404).send({ message: 'No users found' });
+// 	}
+// });
+app.get('/api/users/', getAllUsers);
 app.get('/api/users/:user_id', getUserById);
 app.post('/api/users', postUser);
 app.delete('/api/users/:user_id', removeUser);
