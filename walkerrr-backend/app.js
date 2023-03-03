@@ -14,14 +14,6 @@ app.use(cors());
 app.get('/', (req, res) => {
 	res.status(200).send({ message: 'Walkerrr app backend ready' });
 });
-// app.get('/api/users', async (req, res) => {
-// 	const users = await User.find();
-// 	if (users.length !== 0) {
-// 		res.status(200).json(users);
-// 	} else {
-// 		res.status(404).send({ message: 'No users found' });
-// 	}
-// });
 app.get('/api/users/', getAllUsers);
 app.get('/api/users/:user_id', getUserById);
 app.post('/api/users', postUser);
