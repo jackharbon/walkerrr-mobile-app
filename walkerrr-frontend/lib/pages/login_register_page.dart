@@ -4,6 +4,7 @@ import 'package:walkerrr/auth.dart';
 import 'package:walkerrr/services/user_data_storage.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:walkerrr/common/styling_variables.dart';
+import 'package:walkerrr/services/api_connection.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -76,6 +77,8 @@ class _LoginPageState extends State<LoginPage> {
           email: _controllerEmail.text,
           password: _controllerPassword.text,
           displayname: _controllerDisplayName.text);
+      postUser(_controllerEmail.text, _controllerPassword.text,
+          _controllerDisplayName.text);
     } on FirebaseAuthException catch (e) {
       setState(() {
         errorMessage = e.message;

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:walkerrr/providers/user_provider.dart';
 
+// const baseAPI = 'https://walkerrr-backend.onrender.com';
 const baseAPI = 'https://walkerrr-backend.cyclic.app';
 
 Future<void> postUser(postedEmail, uid, displayname) async {
@@ -35,6 +36,16 @@ Future getUserFromDB(uid) async {
   return parsedUser;
 }
 
+Future getAllUserFromDB() async {
+  final url = Uri.http(baseAPI, '/api/users');
+  final users = await http.get(url, headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  });
+  final parsedUsers = jsonDecode(users.body);
+  return parsedUsers;
+}
+
 Future<void> patchUsername(uid, newUsername) async {
   final url = Uri.http(baseAPI, '/api/users/$uid');
   await http.patch(url,
@@ -43,6 +54,16 @@ Future<void> patchUsername(uid, newUsername) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'displayName': newUsername}));
+}
+
+Future<void> patchEmail(uid, newEmail) async {
+  final url = Uri.http(baseAPI, '/api/users/$uid');
+  await http.patch(url,
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: jsonEncode({'email': newEmail}));
 }
 
 Future<void> patchQuestsToDB(uid, newQuest) async {

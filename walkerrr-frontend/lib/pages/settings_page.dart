@@ -21,9 +21,9 @@ class _HomePageState extends State<HomePage> {
 
 // ==================== User MongoDB data edit ====================>
 
-  // Widget _userUid() {
-  //   return Text(user?.email ?? "User Email");
-  // }
+  Widget _userUid() {
+    return Text(user?.email ?? "User Email");
+  }
 
   final User? user = Auth().currentUser;
 
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> updateEmail() async {
     final newEmail = _controllerEmail.text;
-    // patchEmail(userObject['email'], newEmail);
+    patchEmail(userObject['email'], newEmail);
     _secureStorage.setEmail(newEmail);
   }
 
@@ -700,7 +700,6 @@ class _HomePageState extends State<HomePage> {
       // Page 2
       SingleChildScrollView(
         child: Container(
-          color: Colors.green[50],
           width: double.infinity,
           height: MediaQuery.of(context).size.height - 145,
           child: Column(
@@ -719,7 +718,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text(
                           'Welcome to Walkerrr',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: GlobalStyleVariables.secondaryColour,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 0.5,
                             fontSize: 24,
@@ -815,7 +814,7 @@ class _HomePageState extends State<HomePage> {
                                     );
                                   }
                                 },
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -883,7 +882,7 @@ class _HomePageState extends State<HomePage> {
                 }
               },
               icon: const Icon(Icons.account_circle),
-              color: GlobalStyleVariables.secondaryColour,
+              color: GlobalStyleVariables.invItemBorderColour,
               itemBuilder: (context) => [
                 PopupMenuItem(
                   value: 1,
