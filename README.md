@@ -310,7 +310,7 @@ Install useful software:
 
 1. Preparations
 
--  Install [Flutter](https://docs.flutter.dev/get-started/install) on your computer
+-  Install [Flutter](https://docs.flutter.dev/get-started/install) on your computer.
 -  Install Flutter extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) or by searching within VS Code. The Dart extension will be installed automatically, if not already installed.
 -  Open terminal (`Ctr + '`) in Visual Studio Code and navigate to the front-end directory
 
@@ -320,16 +320,19 @@ Install useful software:
 
 2. Emulating the app
 
--  [Connect your mobile phone using USB](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/remote-debugging/) cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal
-
--  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and replace URL endpoint with your link in the line 5<br />
-   `const baseAPI =`
-   ```sh
-   'https://walkerrr-backend.cyclic.app`;
-   ```
+-  [Connect your mobile phone using USB](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/remote-debugging/) cable or [use an emulator](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) and type in the commands in the terminal.
 -  Navigate to front-end directory
    ```sh
    cd walkerrr-frontend
+   ```
+-  Edit a file [api_connection.dart](walkerrr-frontend\lib\services\api_connection.dart) and replace URL endpoint with your link in the line 5<br />
+   `const baseAPI =`
+   ```sh
+   'https://walkerrr-backend.cyclic.app';
+   ```
+   or
+   ```sh
+   'https://walkerrr-backend.onrender.com';
    ```
 -  Install updates
    ```sh
@@ -350,7 +353,9 @@ Install useful software:
    ```sh
    flutter run
    ```
-   Read [how to use emulator in Visual Studio Code](https://dev.to/dailydevtips1/running-a-flutter-app-on-ios-and-android-emulators-3h33).
+   Wait a few minutes for the app to install.<br />
+   Your Walkerrr app is ready to play.<br  />
+   You can read [how to use emulator in Visual Studio Code](https://dev.to/dailydevtips1/running-a-flutter-app-on-ios-and-android-emulators-3h33).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
