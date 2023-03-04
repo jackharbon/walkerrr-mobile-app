@@ -8,6 +8,7 @@ import 'package:walkerrr/providers/user_provider.dart';
 import 'package:walkerrr/services/api_connection.dart';
 import 'package:walkerrr/services/user_data_storage.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'dart:convert';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -925,6 +926,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+          // ! TESTING BUTTON
+          IconButton(
+            iconSize: 30,
+            icon: const Icon(
+              Icons.run_circle_outlined,
+            ),
+            // the method which is called
+            // when button is pressed
+            onPressed: () {
+              getUsers();
+            },
+          ),
         ],
       ),
       body: PageView(
