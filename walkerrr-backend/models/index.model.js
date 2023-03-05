@@ -25,12 +25,12 @@ async function deleteUserById(id) {
 async function changeUserById(id, body) {
 	const { email, displayName, coins, trophies, quests, equippedArmour } = body;
 	const user = await User.findOne({ uid: id });
-	user.email = email;
-	user.displayName = displayName;
-	user.coins = coins;
-	user.trophies = trophies;
-	user.quests = quests;
-	user.equippedArmour = equippedArmour;
+	if (email) user.email = email;
+	if (displayName) user.displayName = displayName;
+	if (coins) user.coins = coins;
+	if (trophies) user.trophies = trophies;
+	if (quests) user.quests = quests;
+	if (equippedArmour) user.equippedArmour = equippedArmour;
 	await user.save();
 	const updatedUser = await User.findOne({ uid: id });
 	return updatedUser;
