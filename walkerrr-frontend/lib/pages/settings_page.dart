@@ -935,6 +935,21 @@ class _HomePageState extends State<HomePage> {
             // the method which is called
             // when button is pressed
             onPressed: () {
+              // postUser(
+              // '02@u.uk', 'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'postUser 02');
+              // deleteUserDB('IabVBm5y4kf4wZ2hQyq9J6NUuiG3');
+              // getUserFromDB('IabVBm5y4kf4wZ2hQyq9J6NUui02');
+              // patchUsername('IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchUsername 02');
+              // patchEmail('IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchEmail02@u.uk');
+              // patchQuestsToDB(
+              // 'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchQuestToDB-newQuest');
+              // patchComplete(
+              //     'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchComplete-currentQuest');
+              // patchCoins('IabVBm5y4kf4wZ2hQyq9J6NUui02', 100000);
+              // patchTrophiesToDB('IabVBm5y4kf4wZ2hQyq9J6NUui02',
+              // 'patchTrophiesToDB-newTrophy');
+              // patchArmour(
+              // 'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchArmour-newArmour');
               getUsers();
             },
           ),

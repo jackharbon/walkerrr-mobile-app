@@ -59,6 +59,8 @@ class _LoginPageState extends State<LoginPage> {
     try {
       await Auth().signInWithEmailAndPassword(
           email: _controllerEmail.text, password: _controllerPassword.text);
+      print(' --- $_controllerEmail.text ---- ');
+      print(' --- $_controllerPassword.text ---- ');
     } on FirebaseAuthException catch (e) {
       setState(() {
         errorMessage = e.message;
@@ -112,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
     RequiredValidator(errorText: 'Required'),
     MinLengthValidator(4, errorText: 'Min. 4 letters'),
     MaxLengthValidator(20,
-        errorText: "Password cannot be lnoger than 20 characters"),
+        errorText: "Password cannot be longer than 20 characters"),
     PatternValidator(r'(?=.*?[#?!@$%^&*-])',
         errorText: 'Password must contain at least one special character')
   ]);

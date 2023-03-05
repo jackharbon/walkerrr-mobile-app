@@ -8,7 +8,6 @@ const baseAPI = 'https://walkerrr-backend.cyclic.app';
 
 Future<void>? postUser(postedEmail, uid, displayname) async {
   final url = Uri.parse('$baseAPI/api/users');
-  print('------------ $url --------------');
   await http.post(url,
       headers: {
         'Content-Type': 'application/json',
@@ -16,6 +15,7 @@ Future<void>? postUser(postedEmail, uid, displayname) async {
       },
       body: jsonEncode(
           {'email': postedEmail, 'uid': uid, 'displayName': displayname}));
+  print('------- \n $postedEmail $uid $displayname \n -------');
   return;
 }
 
@@ -25,6 +25,7 @@ Future<void> deleteUserDB(uid) async {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
   });
+  print(' ------- \n $uid deleted \n -------');
   return;
 }
 
@@ -35,6 +36,8 @@ Future getUserFromDB(uid) async {
     'Accept': 'application/json'
   });
   final parsedUser = jsonDecode(user.body)[0];
+  print(' ------- \n $parsedUser \n -------');
+
   return parsedUser;
 }
 
@@ -45,7 +48,7 @@ Future getUsers() async {
     'Accept': 'application/json'
   });
   final parsedUsers = jsonDecode(users.body);
-  print('--------------- \n $parsedUsers \n ---------------');
+  print(' ------- \n $parsedUsers \n -------');
   return parsedUsers;
 }
 
@@ -57,6 +60,7 @@ Future<void> patchUsername(uid, newUsername) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'displayName': newUsername}));
+  print(' ------- \n $newUsername \n -------');
 }
 
 Future<void> patchEmail(uid, newEmail) async {
@@ -67,6 +71,7 @@ Future<void> patchEmail(uid, newEmail) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'email': newEmail}));
+  print(' ------- \n $newEmail \n -------');
 }
 
 Future<void> patchQuestsToDB(uid, newQuest) async {
@@ -80,6 +85,7 @@ Future<void> patchQuestsToDB(uid, newQuest) async {
       body: jsonEncode({
         'quests': [...currentQuests, newQuest]
       }));
+  print(' ------- \n $newQuest \n -------');
 }
 
 Future<void> patchComplete(uid, currentQuest) async {
@@ -99,6 +105,7 @@ Future<void> patchComplete(uid, currentQuest) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'quests': currentQuests}));
+  print(' ------- \n $currentQuest $currentQuests \n -------');
 }
 
 Future<void> patchCoins(uid, increment) async {
@@ -110,6 +117,7 @@ Future<void> patchCoins(uid, increment) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'coins': currentCoins + increment}));
+  print(' ------- \n $currentCoins + $increment \n -------');
 }
 
 Future<void> patchTrophiesToDB(uid, newTrophy) async {
@@ -123,6 +131,7 @@ Future<void> patchTrophiesToDB(uid, newTrophy) async {
       body: jsonEncode({
         'trophies': [...currentTrophies, newTrophy]
       }));
+  print(' ------- \n $newTrophy \n -------');
 }
 
 Future<void> patchArmour(uid, newArmour) async {
@@ -133,4 +142,5 @@ Future<void> patchArmour(uid, newArmour) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({"equippedArmour": newArmour}));
+  print(' ------- \n $newArmour \n -------');
 }
