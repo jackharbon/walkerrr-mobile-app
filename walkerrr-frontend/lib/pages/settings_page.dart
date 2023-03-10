@@ -720,8 +720,15 @@ class _HomePageState extends State<HomePage> {
       // Page 2
       SingleChildScrollView(
         child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                GlobalStyleVariables.primaryBackgroundColour,
+                GlobalStyleVariables.primaryBackgroundGradientColour,
+              ])),
           width: double.infinity,
-          color: GlobalStyleVariables.primaryBackgroundColour,
           height: MediaQuery.of(context).size.height - 145,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -7,7 +7,8 @@ class GlobalStyleVariables {
   //  Primary colors
   static const primaryAppBarColour = Color(0xff7776bc);
   static const primaryBottomBarColour = Color(0xffeff0d1);
-  static const primaryBackgroundColour = Color(0xffe6fdff);
+  static const primaryBackgroundColour = Color(0xfff3feff);
+  static const primaryBackgroundGradientColour = Color(0xffeefeff);
   static const primaryAccentColor = Color(0xfff18f01);
   static const primaryTextDarkColour = Color(0xff000000);
   static const primaryTextLightColour = Color(0xffffffff);

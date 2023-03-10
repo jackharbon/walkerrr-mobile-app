@@ -59,6 +59,7 @@ class _SingleQuestState extends State<SingleQuest> {
               }
           });
     }
+
     void startQuest() {
       widget.questOffset = widget.questCurrent;
       setState(() {
@@ -96,7 +97,6 @@ class _SingleQuestState extends State<SingleQuest> {
     if (isQuestReady) {
       buttonText = "Start Quest?";
       _backgroundColor = GlobalStyleVariables.questsButtonReady;
-      widget.questOffset = widget.questCurrent;
       progress = 0.0;
       setState(() {
         isQuestReady = true;
@@ -106,10 +106,11 @@ class _SingleQuestState extends State<SingleQuest> {
       });
     }
     if (isQuestActive) {
+      widget.questCurrent = globalSteps.globalSteps;
       buttonText = "Quest Active";
       _backgroundColor = GlobalStyleVariables.questsButtonActive;
       progressCalc =
-          (widget.questCurrent - widget.questOffset) / widget.questGoal;
+          (globalSteps.globalSteps - widget.questOffset) / widget.questGoal;
       progress = progressCalc < 1.0 ? progressCalc : 1.0;
       setState(() {
         isQuestReady = false;
@@ -161,8 +162,9 @@ class _SingleQuestState extends State<SingleQuest> {
               ],
             ),
           ),
+          // ! text for test to DELETE
           Text(
-              'questCurrent=${widget.questCurrent} questOffset=${widget.questOffset} questGoal=${widget.questGoal}\nprogress: $progress\nprogressCalc: $progressCalc\nuserObject|Quests: ${userObject["quests"]}'),
+              'globalSteps:${globalSteps.globalSteps} \nquestCurrent=${widget.questCurrent} questOffset=${widget.questOffset} questGoal=${widget.questGoal}\nprogress: $progress\nprogressCalc: $progressCalc)',
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: LinearPercentIndicator(

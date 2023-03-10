@@ -474,7 +474,14 @@ class _LoginPageState extends State<LoginPage> {
           backgroundColor: GlobalStyleVariables.primaryAppBarColour,
         ),
         body: Container(
-          color: GlobalStyleVariables.primaryBackgroundColour,
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                GlobalStyleVariables.primaryBackgroundColour,
+                GlobalStyleVariables.primaryBackgroundGradientColour,
+              ])),
           height: double.infinity,
           width: double.infinity,
           padding: const EdgeInsets.all(20),

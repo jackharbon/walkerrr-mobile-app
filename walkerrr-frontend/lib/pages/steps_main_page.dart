@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'dart:async';
-
 import 'package:pedometer/pedometer.dart';
 import 'package:walkerrr/common/armor_variables.dart';
 import 'package:walkerrr/common/styling_variables.dart';
@@ -36,10 +35,11 @@ class MainPedometerState extends State<MainPedometer>
 
   void onStepCount(StepCount event) {
     print('----- onStepCount on steps_main_page:\n$event');
-    setState(() {
-      steps = event.steps.toString();
-      globalSteps.StepsContext().updateGlobalSteps(event.steps);
-    });
+    if (mounted)
+      setState(() {
+        steps = event.steps.toString();
+        globalSteps.StepsContext().updateGlobalSteps(event.steps);
+      });
   }
 
   void onPedestrianStatusChanged(PedestrianStatus event) {
