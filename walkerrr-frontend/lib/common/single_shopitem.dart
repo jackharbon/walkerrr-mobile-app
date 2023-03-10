@@ -36,19 +36,24 @@ class _SingleShopItemState extends State<SingleShopItem> {
     return Container(
       height: double.infinity,
       width: double.infinity,
-      margin: const EdgeInsets.all(5),
+      margin: const EdgeInsets.all(7),
       decoration: BoxDecoration(
           border: Border.all(
-              color: GlobalStyleVariables.invItemBorderColour, width: 5),
-          color: GlobalStyleVariables.invItemBackGroundColour),
+              color: GlobalStyleVariables.equipmentItemBorderColour, width: 1),
+          color: GlobalStyleVariables.equipmentItemBackgroundColour),
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             widget.assetName,
-            Text(widget.name),
+            Text(widget.name,
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
             Text("Price: ${widget.price} Coins"),
             ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      GlobalStyleVariables.equipmentButtonActiveColour,
+                ),
                 onPressed: isButtonActive
                     ? () {
                         setState(() {

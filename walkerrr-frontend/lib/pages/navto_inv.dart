@@ -21,9 +21,16 @@ class _WalkerInventoryState extends State<WalkerInventory> {
         builder: (context, value, child) {
           return Scaffold(
             appBar: AppBar(
-                title: const Text("Inventory"),
-                backgroundColor: GlobalStyleVariables.invAppBarColour),
-            backgroundColor: GlobalStyleVariables.invBackgroundColour,
+              backgroundColor: GlobalStyleVariables.equipmentAppBarColour,
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Inventory'),
+                  Text('Coins: ${userObject["coins"]}'),
+                ],
+              ),
+            ),
+            backgroundColor: GlobalStyleVariables.equipmentBackgroundColour,
             body: GridView.count(
               crossAxisCount: 2,
               children: List.generate(

@@ -7,7 +7,7 @@ import 'package:walkerrr/common/armor_variables.dart';
 import 'package:walkerrr/common/styling_variables.dart';
 import 'package:walkerrr/pages/navto_inv.dart';
 import 'package:walkerrr/pages/navto_shop.dart';
-import 'package:walkerrr/providers/step_provider.dart' as global;
+import 'package:walkerrr/providers/step_provider.dart' as globalSteps;
 import 'package:walkerrr/providers/user_provider.dart';
 
 String formatDate(DateTime d) {
@@ -26,6 +26,7 @@ class MainPedometerState extends State<MainPedometer>
   late Stream<StepCount> _stepCountStream;
   late Stream<PedestrianStatus> _pedestrianStatusStream;
   String status = '?', steps = '?';
+  bool isStepCountAvailable = true;
 
   @override
   void initState() {
@@ -34,37 +35,38 @@ class MainPedometerState extends State<MainPedometer>
   }
 
   void onStepCount(StepCount event) {
-    print(event);
+    print('----- onStepCount on steps_main_page:\n$event');
     setState(() {
       steps = event.steps.toString();
-      global.StepsContext().updateGlobalSteps(event.steps);
+      globalSteps.StepsContext().updateGlobalSteps(event.steps);
     });
   }
 
   void onPedestrianStatusChanged(PedestrianStatus event) {
-    print(event);
+    print('----- onPedestrianStatusChanged on steps_main_page:\n$event.status');
     setState(() {
       status = event.status;
     });
+    print('---- onPedestrianStatusChanged status on steps_main_page:\n$status');
   }
 
   void onPedestrianStatusError(error) {
-    print('onPedestrianStatusError: $error');
+    print('---- onPedestrianStatusError on steps_main_page:\n$error');
     setState(() {
       status = 'Pedestrian Status not available';
     });
-    print(status);
   }
 
   void onStepCountError(error) {
-    print('onStepCountError: $error');
+    print('---- onStepCountError on steps_main_page:\n$error');
     setState(() {
-      steps = 'Step Count not available';
+      // steps = 'Step Count not available';
+      isStepCountAvailable = false;
     });
   }
 
   getCurrentlyEquipped() {
-    print("getting");
+    print("---- getCurrentlyEquipped on steps_main_page:\n$userObject");
     return userObject['equippedArmour'].toLowerCase();
   }
 
@@ -86,7 +88,7 @@ class MainPedometerState extends State<MainPedometer>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    // final currentlyEquipped = getCurrentlyEquipped();
+    final currentlyEquipped = getCurrentlyEquipped();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: WillPopScope(
@@ -101,8 +103,8 @@ class MainPedometerState extends State<MainPedometer>
           floatingActionButton: SpeedDial(
             icon: CustomIcons.icon_add,
             activeIcon: CustomIcons.icon_x,
-            foregroundColor: GlobalStyleVariables.iconBorderColour,
-            backgroundColor: Colors.white,
+            foregroundColor: GlobalStyleVariables.stepsPlusMenuTextColour,
+            backgroundColor: GlobalStyleVariables.stepsPlusMenuBackgroundColour,
             spacing: 3,
             openCloseDial: isDialOpen,
             renderOverlay: false,
@@ -112,10 +114,11 @@ class MainPedometerState extends State<MainPedometer>
               SpeedDialChild(
                 child: Image.asset(
                   "assets/images/icon_BackPack.png",
-                  height: 24,
+                  height: 26,
                   fit: BoxFit.cover,
                 ),
                 label: "Inventory",
+                backgroundColor: GlobalStyleVariables.stepsInventoryMenuColour,
                 onTap: () {
                   Navigator.push(
                       context,
@@ -126,10 +129,11 @@ class MainPedometerState extends State<MainPedometer>
               SpeedDialChild(
                 child: Image.asset(
                   "assets/images/icon_Cart.png",
-                  height: 24,
+                  height: 26,
                   fit: BoxFit.cover,
                 ),
                 label: "Shop",
+                backgroundColor: GlobalStyleVariables.stepsShopMenuColour,
                 onTap: () {
                   Navigator.push(
                       context,
@@ -139,41 +143,61 @@ class MainPedometerState extends State<MainPedometer>
               ),
             ],
           ),
-          body: Container(
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/background.png"),
-                    fit: BoxFit.cover)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text(
-                  'Steps taken:',
-                  style: TextStyle(fontSize: 30, color: Colors.white),
-                ),
-                Text(
-                  steps,
-                  style: const TextStyle(fontSize: 48, color: Colors.white),
-                ),
-
-                const SizedBox(
-                  height: 50,
-                ),
-                // Image.asset(
-                //   status == "walking"
-                //       ? "assets/images/__Run.gif"
-                //       : "assets/images/__Idle.gif",
-                //   scale: 0.5,
-                // ),
-
-                ValueListenableBuilder(
-                    valueListenable: CurrentEquip.current,
-                    builder: (context, value, child) {
-                      return status == "walking"
-                          ? WalkingArmorIcons().getWalkingSprite(value)
-                          : IdleArmorIcons().getIdleSprite(value);
-                    }),
-              ],
+          body: SingleChildScrollView(
+            child: Container(
+              height: MediaQuery.of(context).size.height - 80,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/background.png"),
+                      fit: BoxFit.cover)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'Steps taken:',
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: GlobalStyleVariables.primaryTextLightColour),
+                  ),
+                  if (isStepCountAvailable)
+                    Text(
+                      steps,
+                      style: const TextStyle(
+                          fontSize: 40,
+                          color: GlobalStyleVariables.primaryTextLightColour),
+                    ),
+                  if (!isStepCountAvailable)
+                    const Text(
+                      'Use button to simulate steps',
+                      style: TextStyle(
+                          fontSize: 40,
+                          color: GlobalStyleVariables.primaryTextLightColour),
+                    ),
+                  ValueListenableBuilder(
+                      valueListenable: CurrentEquip.current,
+                      builder: (context, value, child) {
+                        return status == "walking"
+                            ? WalkingArmorIcons().getWalkingSprite(value)
+                            : IdleArmorIcons().getIdleSprite(value);
+                      }),
+                  const Text(
+                    'Current Equipment:',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: GlobalStyleVariables.primaryTextLightColour),
+                  ),
+                  Text(
+                    currentlyEquipped.toUpperCase(),
+                    style: const TextStyle(
+                        fontSize: 20,
+                        color: GlobalStyleVariables.primaryTextLightColour),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

@@ -37,15 +37,21 @@ class Auth {
       final userFromDB = await getUserFromDB(user?.uid);
       UserContext().updateUserObject(userFromDB);
       SecureStorage().setUserObject(userObject);
+      await FirebaseAuth.instance.currentUser!.updateDisplayName(displayname);
     } catch (e) {
-      print(e.toString());
+      print(' --- createUser on auth error:\n$e');
     }
   }
 
-  Future deleteUser() async {
-    await deleteUserDB(currentUser?.uid);
-    await SecureStorage().setUserObject({"null": "null"});
-    await currentUser?.delete();
+  Future deleteUser(String email, String password) async {
+    try {
+      await deleteUserDB(currentUser?.uid);
+      await FirebaseAuth.instance.currentUser!.delete();
+      await SecureStorage().setUserObject({"null": "null"});
+      await currentUser?.delete();
+    } catch (e) {
+      print('---- deleteUser on auth error:\n$e');
+    }
   }
 
   Future<void> signOut() async {

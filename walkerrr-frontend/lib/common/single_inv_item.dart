@@ -33,23 +33,29 @@ class _SingleInventoryItemState extends State<SingleInventoryItem> {
             isButtonActive = true;
             buttonText = "Equip";
           }
+
           return Container(
             height: double.infinity,
             width: double.infinity,
-            // color: GlobalStyleVariables.invItemBackGroundColour,
             margin: const EdgeInsets.all(5),
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: GlobalStyleVariables.invItemBorderColour, width: 5),
-                color: GlobalStyleVariables.invItemBackGroundColour),
-
+                    color: GlobalStyleVariables.equipmentItemBorderColour,
+                    width: 1),
+                color: GlobalStyleVariables.equipmentItemBackgroundColour),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 widget.asset,
-                Text(widget.name),
+                Text(widget.name,
+                    style:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                 ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          GlobalStyleVariables.equipmentItemBorderColour,
+                    ),
                     onPressed: isButtonActive
                         ? () {
                             setState(() {
@@ -62,7 +68,9 @@ class _SingleInventoryItemState extends State<SingleInventoryItem> {
                                 widget.name.toLowerCase();
                           }
                         : null,
-                    child: Text(buttonText))
+                    child: Text(
+                      buttonText,
+                    ))
               ],
             ),
           );

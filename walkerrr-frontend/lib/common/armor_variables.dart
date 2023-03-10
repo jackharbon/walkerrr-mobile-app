@@ -110,5 +110,5 @@ class WalkingArmorIcons {
 
 class CurrentEquip {
   static ValueNotifier<String> current =
-      ValueNotifier(userObject['equippedArmour'].toLowerCase());
+      ValueNotifier(userObject['equippedArmour']?.toLowerCase());
 }

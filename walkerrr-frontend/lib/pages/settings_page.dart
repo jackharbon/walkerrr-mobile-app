@@ -40,18 +40,24 @@ class _HomePageState extends State<HomePage> {
     final newUsername = _controllerDisplayName.text;
     patchUsername(userObject['uid'], newUsername);
     _secureStorage.setDisplayName(newUsername);
+    await FirebaseAuth.instance.currentUser!.updateDisplayName(newUsername);
+    await FirebaseAuth.instance.currentUser!.reload();
   }
 
   Future<void> updateEmail() async {
     final newEmail = _controllerEmail.text;
-    patchEmail(userObject['email'], newEmail);
+    patchEmail(userObject['uid'], newEmail);
     _secureStorage.setEmail(newEmail);
+    await FirebaseAuth.instance.currentUser!.updateEmail(newEmail);
+    await FirebaseAuth.instance.currentUser!.reload();
   }
 
   Future<void> updatePassword() async {
     final newPassword = _controllerPassword.text;
     // patchPassword(userObject['password'], newPassword);
     _secureStorage.setPassword(newPassword);
+    await FirebaseAuth.instance.currentUser!.updatePassword(newPassword);
+    await FirebaseAuth.instance.currentUser!.reload();
   }
 
   // <=============
@@ -59,9 +65,15 @@ class _HomePageState extends State<HomePage> {
   // ---- Pages title ----
   Widget _title() {
     if (_selectedIndex == 0) {
-      return const Text('Steps');
+      return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        const Text('Steps'),
+        Text('Coins: ${userObject["coins"]}'),
+      ]);
     } else if (_selectedIndex == 1) {
-      return const Text('Quests');
+      return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        const Text('Settings'),
+        Text('Coins: ${userObject["coins"]}'),
+      ]);
     } else {
       return const Text('Settings');
     }
@@ -193,29 +205,29 @@ class _HomePageState extends State<HomePage> {
                 )
               }),
           controller: _controllerDisplayName,
-          cursorColor: GlobalStyleVariables.secondaryColour,
+          cursorColor: GlobalStyleVariables.primaryAccentColor,
           decoration: InputDecoration(
             hintText: 'Enter new display name',
             hintStyle: const TextStyle(
-              color: Colors.black26,
+              color: GlobalStyleVariables.primaryTextDarkColour,
               fontSize: 12,
               fontWeight: FontWeight.w400,
               fontStyle: FontStyle.italic,
             ),
             filled: isDisplayNameFocused,
-            fillColor: Colors.black12,
+            fillColor: GlobalStyleVariables.formActive,
             focusedBorder: const UnderlineInputBorder(
               borderSide:
-                  BorderSide(color: GlobalStyleVariables.secondaryColour),
+                  BorderSide(color: GlobalStyleVariables.primaryAccentColor),
             ),
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.black26,
+                color: GlobalStyleVariables.primaryTextDarkColour,
               ),
             ),
             disabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.white,
+                color: GlobalStyleVariables.primaryTextLightColour,
               ),
             ),
             icon: const Icon(Icons.person_outline_outlined),
@@ -238,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                         duration: Duration(seconds: 2),
-                        backgroundColor: Colors.red,
+                        backgroundColor: GlobalStyleVariables.buttonRedActive,
                         content: Text("Check form fields before saving!")),
                   );
                 }
@@ -279,29 +291,29 @@ class _HomePageState extends State<HomePage> {
                 )
               }),
           controller: _controllerEmail,
-          cursorColor: GlobalStyleVariables.secondaryColour,
+          cursorColor: GlobalStyleVariables.primaryAccentColor,
           decoration: InputDecoration(
             hintText: 'Enter new email',
             hintStyle: const TextStyle(
-              color: Colors.black26,
+              color: GlobalStyleVariables.primaryTextDarkColour,
               fontSize: 12,
               fontWeight: FontWeight.w400,
               fontStyle: FontStyle.italic,
             ),
             filled: isEmailFocused,
-            fillColor: Colors.black12,
+            fillColor: GlobalStyleVariables.formActive,
             focusedBorder: const UnderlineInputBorder(
               borderSide:
-                  BorderSide(color: GlobalStyleVariables.secondaryColour),
+                  BorderSide(color: GlobalStyleVariables.primaryAccentColor),
             ),
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.black26,
+                color: GlobalStyleVariables.primaryTextDarkColour,
               ),
             ),
             disabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.white,
+                color: GlobalStyleVariables.primaryTextLightColour,
               ),
             ),
             icon: const Icon(Icons.alternate_email_outlined),
@@ -324,7 +336,7 @@ class _HomePageState extends State<HomePage> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                         duration: Duration(seconds: 2),
-                        backgroundColor: Colors.red,
+                        backgroundColor: GlobalStyleVariables.buttonRedActive,
                         content: Text("Check form fields before saving!")),
                   );
                 }
@@ -382,29 +394,29 @@ class _HomePageState extends State<HomePage> {
                   }
               }),
           controller: _controllerPassword,
-          cursorColor: GlobalStyleVariables.secondaryColour,
+          cursorColor: GlobalStyleVariables.primaryAccentColor,
           decoration: InputDecoration(
             hintText: 'Enter new password',
             hintStyle: const TextStyle(
-              color: Colors.black26,
+              color: GlobalStyleVariables.primaryTextDarkColour,
               fontSize: 12,
               fontWeight: FontWeight.w400,
               fontStyle: FontStyle.italic,
             ),
             filled: isPasswordFocused,
-            fillColor: Colors.black12,
+            fillColor: GlobalStyleVariables.formActive,
             focusedBorder: const UnderlineInputBorder(
               borderSide:
-                  BorderSide(color: GlobalStyleVariables.secondaryColour),
+                  BorderSide(color: GlobalStyleVariables.primaryAccentColor),
             ),
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.black26,
+                color: GlobalStyleVariables.primaryTextDarkColour,
               ),
             ),
             disabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.white,
+                color: GlobalStyleVariables.primaryTextLightColour,
               ),
             ),
             icon: const Icon(Icons.password_outlined),
@@ -459,29 +471,29 @@ class _HomePageState extends State<HomePage> {
                 )
               }),
           controller: _controllerPasswordConfirm,
-          cursorColor: GlobalStyleVariables.secondaryColour,
+          cursorColor: GlobalStyleVariables.primaryAccentColor,
           decoration: InputDecoration(
             hintText: 'Re-type your new password',
             hintStyle: const TextStyle(
-              color: Colors.black26,
+              color: GlobalStyleVariables.primaryTextDarkColour,
               fontSize: 12,
               fontWeight: FontWeight.w400,
               fontStyle: FontStyle.italic,
             ),
             filled: isPasswordConfirmFocused,
-            fillColor: Colors.black12,
+            fillColor: GlobalStyleVariables.formActive,
             focusedBorder: const UnderlineInputBorder(
               borderSide:
-                  BorderSide(color: GlobalStyleVariables.secondaryColour),
+                  BorderSide(color: GlobalStyleVariables.primaryAccentColor),
             ),
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.black26,
+                color: GlobalStyleVariables.primaryTextDarkColour,
               ),
             ),
             disabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.white,
+                color: GlobalStyleVariables.primaryTextLightColour,
               ),
             ),
             icon: const Icon(
@@ -504,7 +516,7 @@ class _HomePageState extends State<HomePage> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                           duration: Duration(seconds: 2),
-                          backgroundColor: Colors.red,
+                          backgroundColor: GlobalStyleVariables.buttonRedActive,
                           content: Text("Passwords are not equal!")),
                     );
                   }
@@ -512,7 +524,7 @@ class _HomePageState extends State<HomePage> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                         duration: Duration(seconds: 2),
-                        backgroundColor: Colors.red,
+                        backgroundColor: GlobalStyleVariables.buttonRedActive,
                         content: Text("Check form fields before saving!")),
                   );
                 }
@@ -533,21 +545,24 @@ class _HomePageState extends State<HomePage> {
         Navigator.of(context).pop();
       },
       style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.grey[600])),
+          backgroundColor: MaterialStateProperty.all(
+              GlobalStyleVariables.buttonGreyInactive)),
       child: const Text("Cancel"),
     );
     Widget continueButton = ElevatedButton(
       onPressed: () async {
         Navigator.of(context).pop();
-        await Auth().deleteUser();
+        await Auth()
+            .deleteUser(_controllerEmail.text, _controllerPassword.text);
         _secureStorage.deleteDisplayName();
         _secureStorage.deleteEmail();
         _secureStorage.deletePassword();
         signOut();
       },
       style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.red[600])),
-      child: const Text("Continue"),
+          backgroundColor:
+              MaterialStateProperty.all(GlobalStyleVariables.buttonRedActive)),
+      child: const Text("DELETE"),
     );
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
@@ -640,6 +655,7 @@ class _HomePageState extends State<HomePage> {
           !isPasswordEditingEnabled &&
           !isPasswordConfirmEditingEnabled) isFormEditingEnabled = false;
     });
+    FirebaseAuth.instance.currentUser!.reload();
   }
 
   // ---- Update Mongo DB email ----
@@ -654,6 +670,7 @@ class _HomePageState extends State<HomePage> {
           !isPasswordEditingEnabled &&
           !isPasswordConfirmEditingEnabled) isFormEditingEnabled = false;
     });
+    FirebaseAuth.instance.currentUser!.reload();
   }
 
   // ---- Update Mongo DB password ----
@@ -671,6 +688,7 @@ class _HomePageState extends State<HomePage> {
           !isPasswordEditingEnabled &&
           !isPasswordConfirmEditingEnabled) isFormEditingEnabled = false;
     });
+    FirebaseAuth.instance.currentUser!.reload();
   }
 
   // ---- Update Mongo DB fields ----
@@ -683,6 +701,7 @@ class _HomePageState extends State<HomePage> {
           isFormEditingEnabled = false,
         });
     cancelEditing();
+    FirebaseAuth.instance.currentUser!.reload();
   }
 
   // <=============
@@ -702,6 +721,7 @@ class _HomePageState extends State<HomePage> {
       SingleChildScrollView(
         child: Container(
           width: double.infinity,
+          color: GlobalStyleVariables.primaryBackgroundColour,
           height: MediaQuery.of(context).size.height - 145,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -719,7 +739,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text(
                           'Welcome to Walkerrr',
                           style: TextStyle(
-                            color: GlobalStyleVariables.secondaryColour,
+                            color: GlobalStyleVariables.primaryAccentColor,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 0.5,
                             fontSize: 24,
@@ -779,14 +799,15 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               OutlinedButton.icon(
                                 icon: const Icon(
-                                  color: Colors.green,
+                                  color: GlobalStyleVariables.buttonGreenActive,
                                   Icons.save_outlined,
                                   size: 24.0,
                                 ),
                                 label: const Text(
                                   'Save Changes',
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color:
+                                        GlobalStyleVariables.buttonGreenActive,
                                   ),
                                 ),
                                 onPressed: () {
@@ -800,7 +821,9 @@ class _HomePageState extends State<HomePage> {
                                           .showSnackBar(
                                         const SnackBar(
                                             duration: Duration(seconds: 2),
-                                            backgroundColor: Colors.red,
+                                            backgroundColor:
+                                                GlobalStyleVariables
+                                                    .buttonRedActive,
                                             content: Text(
                                                 "Passwords are not equal!")),
                                       );
@@ -809,7 +832,8 @@ class _HomePageState extends State<HomePage> {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       const SnackBar(
                                           duration: Duration(seconds: 2),
-                                          backgroundColor: Colors.red,
+                                          backgroundColor: GlobalStyleVariables
+                                              .primaryAccentColor,
                                           content: Text(
                                               "Check form fields before saving!")),
                                     );
@@ -826,28 +850,30 @@ class _HomePageState extends State<HomePage> {
                 // --- delete Account button ---
                 visible: isFormEditingEnabled,
                 child: Container(
-                  color: Colors.red[100],
-                  padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                  color: GlobalStyleVariables.buttonRedBackground,
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('DANGER ZONE:',
+                      const Text('DANGER ZONE:',
                           style: TextStyle(
-                              color: Colors.red[600],
+                              color: GlobalStyleVariables.buttonRedActive,
                               fontWeight: FontWeight.bold,
                               fontSize: 18)),
                       OutlinedButton.icon(
                         style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.red,
+                          backgroundColor: GlobalStyleVariables.buttonRedActive,
                         ),
                         icon: const Icon(
                           Icons.delete_forever_outlined,
-                          color: Colors.white,
-                          size: 20.0,
+                          color: GlobalStyleVariables.primaryTextLightColour,
+                          size: 24.0,
                         ),
                         label: const Text('Delete Account',
-                            style: TextStyle(color: Colors.white)),
+                            style: TextStyle(
+                                color: GlobalStyleVariables
+                                    .primaryTextLightColour)),
                         onPressed: (() => deleteUser()),
                       )
                     ],
@@ -863,7 +889,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: _title(),
-        backgroundColor: GlobalStyleVariables.secondaryColour,
+        backgroundColor: GlobalStyleVariables.primaryAppBarColour,
         actions: <Widget>[
           if (_selectedIndex == 2)
             PopupMenuButton<int>(
@@ -871,7 +897,9 @@ class _HomePageState extends State<HomePage> {
               elevation: 4,
               offset: const Offset(0, 58),
               shape: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white24, width: 1)),
+                  borderSide: BorderSide(
+                      color: GlobalStyleVariables.primaryTextLightColour,
+                      width: 1)),
               onCanceled: () {
                 cancelEditing();
               },
@@ -882,8 +910,11 @@ class _HomePageState extends State<HomePage> {
                   signOut();
                 }
               },
-              icon: const Icon(Icons.account_circle),
-              color: GlobalStyleVariables.invItemBorderColour,
+              icon: const Icon(
+                Icons.account_circle,
+                color: GlobalStyleVariables.primaryTextLightColour,
+              ),
+              color: GlobalStyleVariables.primaryAppBarColour,
               itemBuilder: (context) => [
                 PopupMenuItem(
                   value: 1,
@@ -898,11 +929,13 @@ class _HomePageState extends State<HomePage> {
                       !isFormEditingEnabled
                           ? const Text("Edit profile",
                               style: TextStyle(
-                                color: Colors.white,
+                                color:
+                                    GlobalStyleVariables.primaryTextLightColour,
                               ))
                           : const Text("Cancel",
                               style: TextStyle(
-                                color: Colors.white,
+                                color:
+                                    GlobalStyleVariables.primaryTextLightColour,
                               )),
                     ],
                   ),
@@ -918,7 +951,7 @@ class _HomePageState extends State<HomePage> {
                       const Text(
                         "Sign Out",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: GlobalStyleVariables.primaryTextLightColour,
                         ),
                       )
                     ],
@@ -926,33 +959,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-          // ! TESTING BUTTON
-          IconButton(
-            iconSize: 30,
-            icon: const Icon(
-              Icons.run_circle_outlined,
-            ),
-            // the method which is called
-            // when button is pressed
-            onPressed: () {
-              // postUser(
-              // '02@u.uk', 'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'postUser 02');
-              // deleteUserDB('IabVBm5y4kf4wZ2hQyq9J6NUuiG3');
-              // getUserFromDB('IabVBm5y4kf4wZ2hQyq9J6NUui02');
-              // patchUsername('IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchUsername 02');
-              // patchEmail('IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchEmail02@u.uk');
-              // patchQuestsToDB(
-              // 'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchQuestToDB-newQuest');
-              // patchComplete(
-              //     'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchComplete-currentQuest');
-              // patchCoins('IabVBm5y4kf4wZ2hQyq9J6NUui02', 100000);
-              // patchTrophiesToDB('IabVBm5y4kf4wZ2hQyq9J6NUui02',
-              // 'patchTrophiesToDB-newTrophy');
-              // patchArmour(
-              // 'IabVBm5y4kf4wZ2hQyq9J6NUui02', 'patchArmour-newArmour');
-              getUsers();
-            },
-          ),
         ],
       ),
       body: PageView(
@@ -965,6 +971,7 @@ class _HomePageState extends State<HomePage> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: GlobalStyleVariables.primaryBottomBarColour,
         currentIndex: _selectedIndex,
         items: [
           BottomNavigationBarItem(

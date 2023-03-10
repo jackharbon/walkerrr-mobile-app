@@ -4,7 +4,7 @@ import 'package:walkerrr/auth.dart';
 import 'package:walkerrr/services/user_data_storage.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:walkerrr/common/styling_variables.dart';
-import 'package:walkerrr/services/api_connection.dart';
+// import 'package:walkerrr/services/api_connection.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -59,12 +59,13 @@ class _LoginPageState extends State<LoginPage> {
     try {
       await Auth().signInWithEmailAndPassword(
           email: _controllerEmail.text, password: _controllerPassword.text);
-      print(' --- $_controllerEmail.text ---- ');
-      print(' --- $_controllerPassword.text ---- ');
+      // print('--- login email\n $_controllerEmail.text ');
+      // print(' --- login password\n $_controllerPassword.text');
     } on FirebaseAuthException catch (e) {
       setState(() {
         errorMessage = e.message;
       });
+      // print('--- signIn error message\n$errorMessage ---- ');
     }
   }
 
@@ -79,12 +80,15 @@ class _LoginPageState extends State<LoginPage> {
           email: _controllerEmail.text,
           password: _controllerPassword.text,
           displayname: _controllerDisplayName.text);
-      postUser(_controllerEmail.text, _controllerPassword.text,
-          _controllerDisplayName.text);
+      await FirebaseAuth.instance.currentUser!
+          .updateDisplayName(_controllerDisplayName.text);
+      // postUser(_controllerEmail.text, _controllerPassword.text,
+      // _controllerDisplayName.text);
     } on FirebaseAuthException catch (e) {
       setState(() {
         errorMessage = e.message;
       });
+      // print('--- createUser error message\n$errorMessage');
     }
   }
 // <========
@@ -131,28 +135,30 @@ class _LoginPageState extends State<LoginPage> {
     return TextFormField(
       validator: _displayNameValidator,
       controller: _controllerDisplayName,
-      cursorColor: Colors.green,
+      cursorColor: GlobalStyleVariables.primaryAccentColor,
       decoration: const InputDecoration(
+        errorStyle:
+            TextStyle(color: GlobalStyleVariables.primaryTextErrorColour),
         hintText: 'Enter your name',
         hintStyle: TextStyle(
-          color: Colors.black26,
+          color: GlobalStyleVariables.primaryTextDarkColour,
           fontSize: 12,
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.italic,
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.green),
+          borderSide: BorderSide(color: GlobalStyleVariables.buttonGreenActive),
         ),
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.black26,
+            color: GlobalStyleVariables.primaryTextDarkColour,
           ),
         ),
         prefixIcon: Icon(Icons.person_outline_outlined),
         label: Text(
           'Name',
           style: TextStyle(
-            color: Colors.black54,
+            color: GlobalStyleVariables.primaryTextDarkColour,
             letterSpacing: 0.5,
             fontSize: 14,
           ),
@@ -168,28 +174,30 @@ class _LoginPageState extends State<LoginPage> {
     return TextFormField(
       validator: _emailValidator,
       controller: _controllerEmail,
-      cursorColor: Colors.green,
+      cursorColor: GlobalStyleVariables.primaryAccentColor,
       decoration: const InputDecoration(
+        errorStyle:
+            TextStyle(color: GlobalStyleVariables.primaryTextErrorColour),
         hintText: 'Enter your email',
         hintStyle: TextStyle(
-          color: Colors.black26,
+          color: GlobalStyleVariables.primaryTextDarkColour,
           fontSize: 12,
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.italic,
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.green),
+          borderSide: BorderSide(color: GlobalStyleVariables.buttonGreenActive),
         ),
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.black26,
+            color: GlobalStyleVariables.primaryTextDarkColour,
           ),
         ),
         prefixIcon: Icon(Icons.alternate_email_outlined),
         label: Text(
           'Email',
           style: TextStyle(
-            color: Colors.black54,
+            color: GlobalStyleVariables.primaryTextDarkColour,
             letterSpacing: 0.5,
             fontSize: 14,
           ),
@@ -238,28 +246,31 @@ class _LoginPageState extends State<LoginPage> {
                 }
             }),
         controller: _controllerPassword,
-        cursorColor: Colors.green,
+        cursorColor: GlobalStyleVariables.primaryAccentColor,
         decoration: InputDecoration(
+          errorStyle:
+              TextStyle(color: GlobalStyleVariables.primaryTextErrorColour),
           hintText: 'Enter your password',
           hintStyle: const TextStyle(
-            color: Colors.black26,
+            color: GlobalStyleVariables.primaryTextDarkColour,
             fontSize: 12,
             fontWeight: FontWeight.w400,
             fontStyle: FontStyle.italic,
           ),
           focusedBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.green),
+            borderSide:
+                BorderSide(color: GlobalStyleVariables.buttonGreenActive),
           ),
           enabledBorder: const UnderlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.black26,
+              color: GlobalStyleVariables.primaryTextDarkColour,
             ),
           ),
           prefixIcon: const Icon(Icons.password_outlined),
           label: const Text(
             'Password',
             style: TextStyle(
-              color: Colors.black54,
+              color: GlobalStyleVariables.primaryTextDarkColour,
               letterSpacing: 0.5,
               fontSize: 14,
             ),
@@ -307,21 +318,23 @@ class _LoginPageState extends State<LoginPage> {
       validator: _currentPasswordConfirmValidator,
       onChanged: ((value) => _currentPasswordConfirm = value),
       controller: _controllerPasswordConfirm,
-      cursorColor: Colors.green,
+      cursorColor: GlobalStyleVariables.primaryAccentColor,
       decoration: const InputDecoration(
+        errorStyle:
+            const TextStyle(color: GlobalStyleVariables.primaryTextErrorColour),
         hintText: 'Re-type password',
         hintStyle: TextStyle(
-          color: Colors.black26,
+          color: GlobalStyleVariables.primaryTextDarkColour,
           fontSize: 12,
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.italic,
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.green),
+          borderSide: BorderSide(color: GlobalStyleVariables.buttonGreenActive),
         ),
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.black26,
+            color: GlobalStyleVariables.primaryTextDarkColour,
           ),
         ),
         prefixIcon: Icon(
@@ -330,7 +343,7 @@ class _LoginPageState extends State<LoginPage> {
         label: Text(
           'Confirm password',
           style: TextStyle(
-            color: Colors.black54,
+            color: GlobalStyleVariables.primaryTextDarkColour,
             letterSpacing: 0.5,
             fontSize: 14,
           ),
@@ -339,17 +352,19 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _errorMessage() {
-    return Text(errorMessage == "" ? "" : "$errorMessage");
-  }
+  // Widget _errorMessage() {
+  //   return Text(errorMessage == "" ? "" : "$errorMessage");
+  // }
 
   Widget _submitButton() {
     return ElevatedButton(
         style: isLogin
             ? ElevatedButton.styleFrom(
-                backgroundColor: Colors.green, foregroundColor: Colors.white)
+                backgroundColor: GlobalStyleVariables.buttonGreenActive,
+                foregroundColor: GlobalStyleVariables.primaryTextLightColour)
             : ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, foregroundColor: Colors.white),
+                backgroundColor: GlobalStyleVariables.buttonBlueActive,
+                foregroundColor: GlobalStyleVariables.primaryTextLightColour),
         onPressed: () {
           if (isLogin) {
             _submitValidation();
@@ -362,7 +377,7 @@ class _LoginPageState extends State<LoginPage> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                       duration: Duration(seconds: 2),
-                      backgroundColor: Colors.red,
+                      backgroundColor: GlobalStyleVariables.primaryAccentColor,
                       content: Text("Re-type both passwords!")),
                 );
               }
@@ -370,7 +385,7 @@ class _LoginPageState extends State<LoginPage> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                     duration: const Duration(seconds: 2),
-                    backgroundColor: Colors.red,
+                    backgroundColor: GlobalStyleVariables.primaryAccentColor,
                     content: Text(errorMessage == ""
                         ? "Check form fields!"
                         : "Error: $errorMessage!")),
@@ -396,13 +411,13 @@ class _LoginPageState extends State<LoginPage> {
         child: isLogin
             ? const Text("Register Instead",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: GlobalStyleVariables.buttonBlueActive,
                   letterSpacing: 0.5,
                   fontSize: 14,
                 ))
             : const Text("Login Instead",
                 style: TextStyle(
-                  color: Colors.green,
+                  color: GlobalStyleVariables.buttonGreenActive,
                   letterSpacing: 0.5,
                   fontSize: 14,
                 )));
@@ -412,7 +427,8 @@ class _LoginPageState extends State<LoginPage> {
     return CheckboxListTile(
       title: const Text(
         "Forget Me",
-        style: TextStyle(color: Colors.black54, fontSize: 12),
+        style: TextStyle(
+            color: GlobalStyleVariables.primaryTextDarkColour, fontSize: 12),
       ),
       value: dontStore,
       onChanged: (bool? value) {
@@ -441,7 +457,8 @@ class _LoginPageState extends State<LoginPage> {
         },
         child: const Text(
           "Clear Form",
-          style: TextStyle(color: Colors.black54, fontSize: 12),
+          style: TextStyle(
+              color: GlobalStyleVariables.primaryTextDarkColour, fontSize: 12),
         ));
   }
 
@@ -454,10 +471,10 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         appBar: AppBar(
           title: _title(),
-          backgroundColor: GlobalStyleVariables.secondaryColour,
+          backgroundColor: GlobalStyleVariables.primaryAppBarColour,
         ),
         body: Container(
-          color: Colors.green[50],
+          color: GlobalStyleVariables.primaryBackgroundColour,
           height: double.infinity,
           width: double.infinity,
           padding: const EdgeInsets.all(20),

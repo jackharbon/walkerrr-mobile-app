@@ -22,7 +22,7 @@ class _WalkerShopState extends State<WalkerShop> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: GlobalStyleVariables.invAppBarColour,
+        backgroundColor: GlobalStyleVariables.equipmentAppBarColour,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -31,15 +31,15 @@ class _WalkerShopState extends State<WalkerShop> {
           ],
         ),
       ),
-      backgroundColor: GlobalStyleVariables.invBackgroundColour,
+      backgroundColor: GlobalStyleVariables.equipmentBackgroundColour,
       body: GridView.count(
         crossAxisCount: 2,
         children: [
-          SingleShopItem(name: "Ninja", price: 500, assetName: ninja),
-          SingleShopItem(name: "Rogue", price: 500, assetName: rogue),
-          SingleShopItem(name: "Knight", price: 500, assetName: knight),
-          SingleShopItem(name: "Shaman", price: 500, assetName: shaman),
           SingleShopItem(name: "Beach", price: 500, assetName: beach),
+          SingleShopItem(name: "Ninja", price: 1000, assetName: ninja),
+          SingleShopItem(name: "Rogue", price: 1500, assetName: rogue),
+          SingleShopItem(name: "Knight", price: 2500, assetName: knight),
+          SingleShopItem(name: "Shaman", price: 4000, assetName: shaman),
         ],
       ),
     );

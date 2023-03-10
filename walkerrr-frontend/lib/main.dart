@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
-          primary: GlobalStyleVariables.secondaryColour,
+          primary: GlobalStyleVariables.primaryAccentColor,
         ),
       ),
       home: const WidgetTree(),
