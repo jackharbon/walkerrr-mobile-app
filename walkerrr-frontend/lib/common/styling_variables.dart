@@ -29,12 +29,14 @@ class GlobalStyleVariables {
   static const formActive = Color(0xfffcf0cc);
 
   // Quest Page Blue
-  static const questsButtonActive = Color(0xffc6a3dc);
-  static const questsButtonReady = Color(0xff7503b8);
+  static const questsButtonReady = Color(0xffc6a3dc);
+  static const questsButtonActive = Color(0xff7503b8);
+  static const questsButtonInactive = Color(0xffd1dbe4);
   static const questsButtonFinished = Color(0xff5eb336);
   static const questsButtonClaimed = Color(0xff839788);
   static const questsProgressBar = Color(0xffa767cd);
   static const questsProgressBarBackground = Color(0xffdbdfff);
+  static const questsProgressBarInactiveBackground = Color(0xffd1dbe4);
   static const questsDivider = Color(0xffdbc9e5);
 
   // Steps Page Green
