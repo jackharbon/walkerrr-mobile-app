@@ -171,7 +171,7 @@ class MainPedometerState extends State<MainPedometer>
                     const Text(
                       'Use button to simulate steps',
                       style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 30,
                           color: GlobalStyleVariables.primaryTextLightColour),
                     ),
                   ValueListenableBuilder(

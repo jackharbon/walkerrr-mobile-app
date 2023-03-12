@@ -41,27 +41,76 @@ class SingleQuest extends StatefulWidget {
 class _SingleQuestState extends State<SingleQuest> {
   bool isQuestReady = true;
   bool isQuestActive = false;
+  bool isQuestInactive = false;
   bool isQuestFinished = false;
   bool isQuestClaimed = false;
-  final currentQuests = userObject["quests"];
+  var currentQuests = userObject["quests"];
   String buttonText = "Start Quest?";
   double progress = 0.0;
   double progressCalc = 0.0;
-  var _backgroundColor = GlobalStyleVariables.questsButtonReady;
+  var _buttonBackgroundColor = GlobalStyleVariables.questsButtonReady;
+  var _barBackgroundColor = GlobalStyleVariables.questsProgressBarBackground;
 
   @override
   Widget build(BuildContext context) {
-    if (currentQuests != null) {
-      currentQuests.forEach((quest) => {
-            if (quest["questTitle"] == widget.questTitle)
-              {
-                isQuestActive = true,
-              }
-          });
-    }
+    // if (currentQuests["quests"] != null) {
+    //   currentQuests.forEach((quest) => {
+    //         currentQuests = userObject["quests"],
+    //         if (widget.questTitle == quest["questTitle"] ||
+    //             currentQuests[0]['questTitle'] ||
+    //             userObject["quests"][0]['questTitle'])
+    //           {
+    //             setState(() {
+    //               isQuestReady = false;
+    //               isQuestActive = true;
+    //             })
+    //           }
+    //         else
+    //           {
+    //             setState(() {
+    //               isQuestReady = false;
+    //               isQuestInactive = true;
+    //             })
+    //           }
+    //       });
+    // }
 
+    if (isQuestReady) {
+      buttonText = "Start Quest?";
+      _buttonBackgroundColor = GlobalStyleVariables.questsButtonReady;
+      progress = 0.0;
+    }
+    if (isQuestActive) {
+      buttonText = "Quest Active";
+      _buttonBackgroundColor = GlobalStyleVariables.questsButtonActive;
+      progressCalc =
+          (globalSteps.globalSteps - widget.questOffset) / widget.questGoal;
+      progress = progressCalc < 1.0 ? progressCalc : 1.0;
+      setState(() {
+        isQuestActive = progress < 1.0 ? true : false;
+        isQuestFinished = progress < 1.0 ? false : true;
+        isQuestClaimed = false;
+      });
+    }
+    if (isQuestInactive) {
+      buttonText = "Quest Inactive";
+      _buttonBackgroundColor = GlobalStyleVariables.questsButtonInactive;
+      _barBackgroundColor =
+          GlobalStyleVariables.questsProgressBarInactiveBackground;
+      progress = 0.0;
+    }
+    if (isQuestFinished) {
+      buttonText = 'Claim ${widget.reward} coins';
+      _buttonBackgroundColor = GlobalStyleVariables.questsButtonFinished;
+      progress = 1.0;
+    }
+    if (isQuestClaimed) {
+      buttonText = "Quest Finished";
+      _buttonBackgroundColor = GlobalStyleVariables.questsButtonClaimed;
+      progress = 1.0;
+    }
     void startQuest() {
-      widget.questOffset = widget.questCurrent;
+      // widget.questOffset = widget.questCurrent;
       setState(() {
         final newQuest = {
           "questTitle": widget.questTitle,
@@ -85,62 +134,17 @@ class _SingleQuestState extends State<SingleQuest> {
     void claimQuest() {
       checkCompletion(progress, widget.questTitle, widget.reward);
       setState(() {
-        isQuestFinished = false;
         isQuestClaimed = true;
       });
       print(
           '---- claimQuest on single_quest:\n$progress ${widget.questTitle} ${widget.reward}');
     }
 
-    void noAction() {}
+    void noAction() {
+      print(
+          '---- noAction Inactive button on single_quest pressed:\n$progress ${widget.questTitle}');
+    }
 
-    if (isQuestReady) {
-      buttonText = "Start Quest?";
-      _backgroundColor = GlobalStyleVariables.questsButtonReady;
-      progress = 0.0;
-      setState(() {
-        isQuestReady = true;
-        isQuestActive = false;
-        isQuestFinished = false;
-        isQuestClaimed = false;
-      });
-    }
-    if (isQuestActive) {
-      widget.questCurrent = globalSteps.globalSteps;
-      buttonText = "Quest Active";
-      _backgroundColor = GlobalStyleVariables.questsButtonActive;
-      progressCalc =
-          (globalSteps.globalSteps - widget.questOffset) / widget.questGoal;
-      progress = progressCalc < 1.0 ? progressCalc : 1.0;
-      setState(() {
-        isQuestReady = false;
-        isQuestActive = progress < 1.0 ? true : false;
-        isQuestFinished = progress < 1.0 ? false : true;
-        isQuestClaimed = false;
-      });
-    }
-    if (isQuestFinished) {
-      buttonText = 'Claim ${widget.reward} coins';
-      _backgroundColor = GlobalStyleVariables.questsButtonFinished;
-      progress = 1.0;
-      setState(() {
-        isQuestReady = false;
-        isQuestActive = false;
-        isQuestFinished = true;
-        isQuestClaimed = false;
-      });
-    }
-    if (isQuestClaimed) {
-      buttonText = "Quest Finished";
-      _backgroundColor = GlobalStyleVariables.questsButtonClaimed;
-      progress = 1.0;
-      setState(() {
-        isQuestReady = false;
-        isQuestActive = false;
-        isQuestFinished = false;
-        isQuestClaimed = true;
-      });
-    }
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -164,14 +168,17 @@ class _SingleQuestState extends State<SingleQuest> {
           ),
           // ! text for test to DELETE
           Text(
-              'globalSteps:${globalSteps.globalSteps} \nquestCurrent=${widget.questCurrent} questOffset=${widget.questOffset} questGoal=${widget.questGoal}\nprogress: $progress\nprogressCalc: $progressCalc)',
+              'Ready:$isQuestReady Active:$isQuestActive Inactive:$isQuestInactive Finished:$isQuestFinished Claimed:$isQuestClaimed\n'),
+          Text('questTitle:${widget.questTitle}\n'),
+          Text(
+              'globalSteps:${globalSteps.globalSteps} \nquestCurrent=${widget.questCurrent} questOffset=${widget.questOffset} questGoal=${widget.questGoal}\nprogress: $progress\nprogressCalc: $progressCalc'),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: LinearPercentIndicator(
               width: MediaQuery.of(context).size.width - 80,
               animation: true,
               lineHeight: 26.0,
-              backgroundColor: GlobalStyleVariables.questsProgressBarBackground,
+              backgroundColor: _barBackgroundColor,
               progressColor: GlobalStyleVariables.questsProgressBar,
               barRadius: const Radius.circular(20.0),
               leading: const Icon(Icons.directions_walk_outlined),
@@ -198,7 +205,7 @@ class _SingleQuestState extends State<SingleQuest> {
                       ? claimQuest
                       : noAction,
               style: ElevatedButton.styleFrom(
-                  backgroundColor: _backgroundColor,
+                  backgroundColor: _buttonBackgroundColor,
                   foregroundColor: GlobalStyleVariables.primaryTextLightColour),
               child: Text(buttonText)),
         ],
