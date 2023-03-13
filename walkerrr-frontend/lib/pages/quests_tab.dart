@@ -86,6 +86,7 @@ class _QuestListState extends State<QuestList> {
                 questCurrent: getCurrent("Walk 50 Steps"),
                 questStart: startTime("Walk 50 Steps"),
                 reward: 400,
+                isActive: false,
                 completed: false,
               ),
               const Divider(
@@ -99,6 +100,7 @@ class _QuestListState extends State<QuestList> {
                 questCurrent: getCurrent("Walk 500 Steps"),
                 questStart: startTime("Walk 500 Steps"),
                 reward: 1000,
+                isActive: false,
                 completed: false,
               ),
               const Divider(
@@ -112,6 +114,7 @@ class _QuestListState extends State<QuestList> {
                 questCurrent: getCurrent("Walk 2500 Steps"),
                 questStart: startTime("Walk 2500 Steps"),
                 reward: 1500,
+                isActive: false,
                 completed: false,
               ),
               const Divider(
@@ -125,6 +128,7 @@ class _QuestListState extends State<QuestList> {
                 questCurrent: getCurrent("Walk 5000 Steps"),
                 questStart: startTime("Walk 5000 Steps"),
                 reward: 2500,
+                isActive: false,
                 completed: false,
               ),
               const Divider(
@@ -138,6 +142,7 @@ class _QuestListState extends State<QuestList> {
                 questCurrent: getCurrent("Walk 10000 Steps"),
                 questStart: startTime("Walk 10000 Steps"),
                 reward: 4000,
+                isActive: false,
                 completed: false,
               ),
               const Divider(

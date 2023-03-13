@@ -4,6 +4,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:walkerrr/common/styling_variables.dart';
 import 'package:walkerrr/providers/user_provider.dart';
 import 'package:walkerrr/services/api_connection.dart';
+import 'package:walkerrr/pages/quests_tab.dart';
 import "package:walkerrr/providers/step_provider.dart" as globalSteps;
 
 void checkCompletion(progress, currentQuest, reward) {
@@ -23,15 +24,17 @@ class SingleQuest extends StatefulWidget {
     required this.questOffset,
     required this.questStart,
     required this.reward,
+    required this.isActive,
     required this.completed,
   });
 
   final String questTitle;
   final int questGoal;
-  int questCurrent;
-  int questOffset;
+  int questCurrent = globalSteps.globalSteps;
+  final int questOffset;
   final int reward;
   final String questStart;
+  bool isActive;
   final bool completed;
 
   @override
@@ -53,27 +56,33 @@ class _SingleQuestState extends State<SingleQuest> {
 
   @override
   Widget build(BuildContext context) {
-    // if (currentQuests["quests"] != null) {
-    //   currentQuests.forEach((quest) => {
-    //         currentQuests = userObject["quests"],
-    //         if (widget.questTitle == quest["questTitle"] ||
-    //             currentQuests[0]['questTitle'] ||
-    //             userObject["quests"][0]['questTitle'])
-    //           {
-    //             setState(() {
-    //               isQuestReady = false;
-    //               isQuestActive = true;
-    //             })
-    //           }
-    //         else
-    //           {
-    //             setState(() {
-    //               isQuestReady = false;
-    //               isQuestInactive = true;
-    //             })
-    //           }
-    //       });
-    // }
+    if (userObject["quests"] != null) {
+      getUserFromDB(userObject['uid']);
+      currentQuests.forEach((quest) => {
+            currentQuests = userObject["quests"],
+            if (widget.questTitle == quest["questTitle"] ||
+                widget.questTitle == userObject["quests"][0]["questTitle"])
+              {
+                widget.questCurrent = globalSteps.globalSteps,
+                progressCalc = (globalSteps.globalSteps -
+                        userObject["quests"][0]["questOffset"]) /
+                    widget.questGoal,
+                setState(() {
+                  isQuestReady = false;
+                  isQuestActive = progress < 1.0 ? true : false;
+                  isQuestFinished = progress < 1.0 ? false : true;
+                  isQuestClaimed = false;
+                }),
+              }
+            else
+              {
+                setState(() {
+                  isQuestReady = false;
+                  isQuestInactive = true;
+                })
+              }
+          });
+    }
 
     if (isQuestReady) {
       buttonText = "Start Quest?";
@@ -83,10 +92,11 @@ class _SingleQuestState extends State<SingleQuest> {
     if (isQuestActive) {
       buttonText = "Quest Active";
       _buttonBackgroundColor = GlobalStyleVariables.questsButtonActive;
-      progressCalc =
-          (globalSteps.globalSteps - widget.questOffset) / widget.questGoal;
+      // progressCalc =
+      //     (globalSteps.globalSteps - widget.questOffset) / widget.questGoal;
       progress = progressCalc < 1.0 ? progressCalc : 1.0;
       setState(() {
+        isQuestReady = false;
         isQuestActive = progress < 1.0 ? true : false;
         isQuestFinished = progress < 1.0 ? false : true;
         isQuestClaimed = false;
@@ -110,25 +120,26 @@ class _SingleQuestState extends State<SingleQuest> {
       progress = 1.0;
     }
     void startQuest() {
-      // widget.questOffset = widget.questCurrent;
+      var newQuest = {};
       setState(() {
-        final newQuest = {
+        newQuest = {
           "questTitle": widget.questTitle,
           "questGoal": widget.questGoal,
-          "questOffset": globalSteps.globalSteps,
+          "questOffset": widget.questOffset,
           "questCurrent": widget.questCurrent,
           "questStart": widget.questStart,
           "questReward": widget.reward,
+          "questIsActive": widget.isActive = true,
           "questCompleted": widget.completed
         };
-        patchQuestsToDB(userObject['uid'], newQuest);
-        final currentQuests = userObject["quests"];
-        userObject["quests"] = [...currentQuests, newQuest];
-        isQuestReady = false;
-        isQuestActive = true;
-        print(
-            '---- startQuest - userObject["quests"] on single_quest:\n${userObject["quests"]}');
       });
+      widget.questCurrent = globalSteps.globalSteps;
+      patchQuestsToDB(userObject['uid'], newQuest);
+      userObject["quests"] = [newQuest];
+      currentQuests = userObject["quests"];
+      getUserFromDB(userObject['uid']);
+      print(
+          '---- startQuest - userObject["quests"] on single_quest:\n${userObject["quests"]}');
     }
 
     void claimQuest() {
@@ -169,9 +180,11 @@ class _SingleQuestState extends State<SingleQuest> {
           // ! text for test to DELETE
           Text(
               'Ready:$isQuestReady Active:$isQuestActive Inactive:$isQuestInactive Finished:$isQuestFinished Claimed:$isQuestClaimed\n'),
-          Text('questTitle:${widget.questTitle}\n'),
+          Text('questTitle:${widget.questTitle}'),
           Text(
               'globalSteps:${globalSteps.globalSteps} \nquestCurrent=${widget.questCurrent} questOffset=${widget.questOffset} questGoal=${widget.questGoal}\nprogress: $progress\nprogressCalc: $progressCalc'),
+          Text(
+              'currentQuests:\n$currentQuests\nuserObject["quests"]:\n${userObject["quests"]}'),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: LinearPercentIndicator(

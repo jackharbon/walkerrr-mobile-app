@@ -15,7 +15,7 @@ Future<void>? postUser(postedEmail, uid, displayname) async {
       },
       body: jsonEncode(
           {'email': postedEmail, 'uid': uid, 'displayName': displayname}));
-  print('------- postUser api_connection\n $postedEmail $uid $displayname');
+  print('------- postUser on api_connection\n $postedEmail $uid $displayname');
   return;
 }
 
@@ -25,7 +25,7 @@ Future<void> deleteUserDB(uid) async {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
   });
-  print('------- deleteUserDB api_connection \n $uid');
+  print('------- deleteUserDB on api_connection \n $uid');
   return;
 }
 
@@ -36,7 +36,7 @@ Future getUserFromDB(uid) async {
     'Accept': 'application/json'
   });
   final parsedUser = jsonDecode(user.body)[0];
-  print('------- getUserFromDB api_connection\n$parsedUser');
+  print('------- getUserFromDB on api_connection\n$parsedUser');
 
   return parsedUser;
 }
@@ -48,7 +48,7 @@ Future getUsers() async {
     'Accept': 'application/json'
   });
   final parsedUsers = jsonDecode(users.body);
-  print('------- getUsers api_connection\n$parsedUsers');
+  print('------- getUsers on api_connection\n$parsedUsers');
   return parsedUsers;
 }
 
@@ -60,7 +60,7 @@ Future<void> patchUsername(uid, newUsername) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'displayName': newUsername}));
-  print('------- patchUsername api_connection\n$newUsername');
+  print('------- patchUsername on api_connection\n$newUsername');
 }
 
 Future<void> patchEmail(uid, newEmail) async {
@@ -71,7 +71,7 @@ Future<void> patchEmail(uid, newEmail) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'email': newEmail}));
-  print('------- postEmail api_connection\n$newEmail');
+  print('------- postEmail on api_connection\n$newEmail');
 }
 
 Future<void> patchQuestsToDB(uid, newQuest) async {
@@ -85,7 +85,7 @@ Future<void> patchQuestsToDB(uid, newQuest) async {
       body: jsonEncode({
         'quests': [...currentQuests, newQuest]
       }));
-  print('------- patchQuests api_connection\n$newQuest');
+  print('------- patchQuests on api_connection\n$newQuest');
 }
 
 Future<void> patchComplete(uid, currentQuest) async {
@@ -105,7 +105,8 @@ Future<void> patchComplete(uid, currentQuest) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'quests': currentQuests}));
-  print('------- patchComplete api_connection\n$currentQuest $currentQuests');
+  print(
+      '------- patchComplete on api_connection\n$currentQuest $currentQuests');
 }
 
 Future<void> patchCoins(uid, increment) async {
@@ -117,7 +118,19 @@ Future<void> patchCoins(uid, increment) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'coins': currentCoins + increment}));
-  print('------- patchCoins api_connection\n$currentCoins + $increment');
+  print('------- patchCoins on api_connection\n$currentCoins + $increment');
+}
+
+Future<void> patchSteps(uid, steps) async {
+  final url = Uri.parse('$baseAPI/api/users/$uid');
+  final currentSteps = userObject["quests"][0]["questCurrent"];
+  await http.patch(url,
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: jsonEncode({'coins': currentSteps}));
+  print('------- patchSteps on api_connection\n$currentSteps');
 }
 
 Future<void> patchTrophiesToDB(uid, newTrophy) async {
@@ -131,7 +144,7 @@ Future<void> patchTrophiesToDB(uid, newTrophy) async {
       body: jsonEncode({
         'trophies': [...currentTrophies, newTrophy]
       }));
-  print('------- patchTrophies api_connection\n$newTrophy');
+  print('------- patchTrophies on api_connection\n$newTrophy');
 }
 
 Future<void> patchArmour(uid, newArmour) async {
@@ -142,5 +155,5 @@ Future<void> patchArmour(uid, newArmour) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({"equippedArmour": newArmour}));
-  print('------- patchArmour api_connection\n$newArmour');
+  print('------- patchArmour on api_connection\n$newArmour');
 }
