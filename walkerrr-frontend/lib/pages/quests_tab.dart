@@ -3,7 +3,11 @@ import 'package:walkerrr/common/single_quest.dart';
 import 'package:walkerrr/common/styling_variables.dart';
 import 'package:walkerrr/providers/step_provider.dart' as globalSteps;
 import 'package:walkerrr/providers/user_provider.dart';
+// import 'package:walkerrr/pages/steps_main_page.dart' as SecondPedometer;
 import 'package:walkerrr/services/api_connection.dart';
+
+import 'dart:async';
+import 'package:pedometer/pedometer.dart';
 
 class QuestList extends StatefulWidget {
   const QuestList({super.key});
@@ -63,7 +67,65 @@ getCurrent(questTitle) {
   return returnValue;
 }
 
-class _QuestListState extends State<QuestList> {
+class _QuestListState extends State<QuestList>
+    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
+  late Stream<StepCount> _stepCountStream;
+  late Stream<PedestrianStatus> _pedestrianStatusStream;
+  bool isStepCountAvailable = true;
+  String status = '?', steps = '?';
+
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+  }
+
+  void initPlatformState() {
+    _pedestrianStatusStream = Pedometer.pedestrianStatusStream;
+    _pedestrianStatusStream
+        .listen(onPedestrianStatusChanged)
+        .onError(onPedestrianStatusError);
+
+    _stepCountStream = Pedometer.stepCountStream;
+    _stepCountStream.listen(onStepCount).onError(onStepCountError);
+
+    if (!mounted) return;
+  }
+
+  void onStepCount(StepCount event) {
+    print('----- onStepCount on steps_main_page:\n$event');
+    if (mounted)
+      setState(() {
+        steps = event.steps.toString();
+        globalSteps.StepsContext().updateGlobalSteps(event.steps);
+      });
+  }
+
+  void onPedestrianStatusChanged(PedestrianStatus event) {
+    print('----- onPedestrianStatusChanged on steps_main_page:\n$event.status');
+    setState(() {
+      status = event.status;
+    });
+    print('---- onPedestrianStatusChanged status on steps_main_page:\n$status');
+  }
+
+  void onPedestrianStatusError(error) {
+    print('---- onPedestrianStatusError on steps_main_page:\n$error');
+    setState(() {
+      status = 'Pedestrian Status not available';
+    });
+  }
+
+  void onStepCountError(error) {
+    print('---- onStepCountError on steps_main_page:\n$error');
+    setState(() {
+      // steps = 'Step Count not available';
+      isStepCountAvailable = false;
+    });
+  }
+
+  @override
+  bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

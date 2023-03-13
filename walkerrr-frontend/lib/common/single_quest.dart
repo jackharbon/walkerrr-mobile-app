@@ -29,7 +29,7 @@ class SingleQuest extends StatefulWidget {
 
   final String questTitle;
   final int questGoal;
-  int questCurrent = globalSteps.globalSteps;
+  final int questCurrent;
   final int questOffset;
   final int reward;
   final String questStart;
@@ -61,8 +61,8 @@ class _SingleQuestState extends State<SingleQuest> {
             currentQuests = userObject["quests"],
             if (widget.questTitle == quest["questTitle"])
               {
-                widget.questCurrent = globalSteps.globalSteps,
-                progressCalc = (globalSteps.globalSteps - widget.questOffset) /
+                progressCalc = (globalSteps.globalSteps -
+                        userObject["quests"][0]['questCurrent']) /
                     widget.questGoal,
                 setState(() {
                   isQuestReady = false;
@@ -89,8 +89,6 @@ class _SingleQuestState extends State<SingleQuest> {
     if (isQuestActive) {
       buttonText = "Quest Active";
       _buttonBackgroundColor = GlobalStyleVariables.questsButtonActive;
-      // progressCalc =
-      //     (globalSteps.globalSteps - widget.questOffset) / widget.questGoal;
       progress = progressCalc < 1.0 ? progressCalc : 1.0;
       setState(() {
         isQuestReady = false;
@@ -130,7 +128,6 @@ class _SingleQuestState extends State<SingleQuest> {
           "questCompleted": widget.completed
         };
       });
-      widget.questCurrent = globalSteps.globalSteps;
       patchQuestsToDB(userObject['uid'], newQuest);
       userObject["quests"] = [newQuest];
       currentQuests = userObject["quests"];
