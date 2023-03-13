@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:walkerrr/providers/user_provider.dart';
-import 'package:walkerrr/models/users.dart';
 
 // const baseAPI = 'https://walkerrr-backend.onrender.com';
 const baseAPI = 'https://walkerrr-backend.cyclic.app';
@@ -119,18 +118,6 @@ Future<void> patchCoins(uid, increment) async {
       },
       body: jsonEncode({'coins': currentCoins + increment}));
   print('------- patchCoins on api_connection\n$currentCoins + $increment');
-}
-
-Future<void> patchSteps(uid, steps) async {
-  final url = Uri.parse('$baseAPI/api/users/$uid');
-  final currentSteps = userObject["quests"][0]["questCurrent"];
-  await http.patch(url,
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: jsonEncode({'coins': currentSteps}));
-  print('------- patchSteps on api_connection\n$currentSteps');
 }
 
 Future<void> patchTrophiesToDB(uid, newTrophy) async {

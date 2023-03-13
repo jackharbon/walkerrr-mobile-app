@@ -4,7 +4,6 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:walkerrr/common/styling_variables.dart';
 import 'package:walkerrr/providers/user_provider.dart';
 import 'package:walkerrr/services/api_connection.dart';
-import 'package:walkerrr/pages/quests_tab.dart';
 import "package:walkerrr/providers/step_provider.dart" as globalSteps;
 
 void checkCompletion(progress, currentQuest, reward) {
@@ -60,12 +59,10 @@ class _SingleQuestState extends State<SingleQuest> {
       getUserFromDB(userObject['uid']);
       currentQuests.forEach((quest) => {
             currentQuests = userObject["quests"],
-            if (widget.questTitle == quest["questTitle"] ||
-                widget.questTitle == userObject["quests"][0]["questTitle"])
+            if (widget.questTitle == quest["questTitle"])
               {
                 widget.questCurrent = globalSteps.globalSteps,
-                progressCalc = (globalSteps.globalSteps -
-                        userObject["quests"][0]["questOffset"]) /
+                progressCalc = (globalSteps.globalSteps - widget.questOffset) /
                     widget.questGoal,
                 setState(() {
                   isQuestReady = false;
