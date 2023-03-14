@@ -21,6 +21,8 @@ class _SingleInventoryItemState extends State<SingleInventoryItem> {
   bool isButtonActive = true;
   String buttonText = "Equip";
 
+  var _backgroundColor = GlobalStyleVariables.equipmentButtonActiveColour;
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -29,9 +31,12 @@ class _SingleInventoryItemState extends State<SingleInventoryItem> {
           if (value == widget.name.toLowerCase()) {
             isButtonActive = false;
             buttonText = "Equipped";
+            _backgroundColor =
+                GlobalStyleVariables.equipmentButtonInactiveColour;
           } else {
             isButtonActive = true;
             buttonText = "Equip";
+            _backgroundColor = GlobalStyleVariables.equipmentButtonActiveColour;
           }
 
           return Container(
@@ -53,9 +58,7 @@ class _SingleInventoryItemState extends State<SingleInventoryItem> {
                         fontSize: 16, fontWeight: FontWeight.w500)),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: isButtonActive
-                          ? GlobalStyleVariables.equipmentButtonActiveColour
-                          : GlobalStyleVariables.equipmentButtonInactiveColour,
+                      backgroundColor: _backgroundColor,
                     ),
                     onPressed: isButtonActive
                         ? () {

@@ -23,16 +23,27 @@ class _SingleShopItemState extends State<SingleShopItem> {
   final currentTrophies = userObject['trophies'];
   String buttonText = "Buy";
 
+  var _backgroundColor = GlobalStyleVariables.equipmentButtonActiveColour;
+
   @override
   Widget build(BuildContext context) {
     if (currentTrophies != null) {
       currentTrophies.forEach((trophy) => {
             if (trophy["name"] == widget.name)
-              {isButtonActive = false, buttonText = "Purchased"}
+              {
+                isButtonActive = false,
+                buttonText = "Purchased",
+                _backgroundColor =
+                    GlobalStyleVariables.equipmentButtonInactiveColour,
+              }
             else
-              {null}
+              {
+                GlobalStyleVariables.equipmentButtonActiveColour,
+              }
           });
     }
+
+    if (isButtonActive == false) {}
     return Container(
       height: double.infinity,
       width: double.infinity,
@@ -51,9 +62,7 @@ class _SingleShopItemState extends State<SingleShopItem> {
             Text("Price: ${widget.price} Coins"),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: isButtonActive
-                      ? GlobalStyleVariables.equipmentButtonActiveColour
-                      : GlobalStyleVariables.equipmentButtonInactiveColour,
+                  backgroundColor: _backgroundColor,
                 ),
                 onPressed: isButtonActive
                     ? () {
