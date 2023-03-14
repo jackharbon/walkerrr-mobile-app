@@ -49,12 +49,13 @@ class _SingleInventoryItemState extends State<SingleInventoryItem> {
               children: [
                 widget.asset,
                 Text(widget.name,
-                    style:
-                        TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.w500)),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          GlobalStyleVariables.equipmentItemBorderColour,
+                      backgroundColor: isButtonActive
+                          ? GlobalStyleVariables.equipmentButtonActiveColour
+                          : GlobalStyleVariables.equipmentButtonInactiveColour,
                     ),
                     onPressed: isButtonActive
                         ? () {

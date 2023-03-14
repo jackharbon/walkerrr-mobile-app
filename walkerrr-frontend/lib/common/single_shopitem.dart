@@ -51,8 +51,9 @@ class _SingleShopItemState extends State<SingleShopItem> {
             Text("Price: ${widget.price} Coins"),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor:
-                      GlobalStyleVariables.equipmentButtonActiveColour,
+                  backgroundColor: isButtonActive
+                      ? GlobalStyleVariables.equipmentButtonActiveColour
+                      : GlobalStyleVariables.equipmentButtonInactiveColour,
                 ),
                 onPressed: isButtonActive
                     ? () {

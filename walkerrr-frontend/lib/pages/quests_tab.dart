@@ -3,7 +3,6 @@ import 'package:walkerrr/common/single_quest.dart';
 import 'package:walkerrr/common/styling_variables.dart';
 import 'package:walkerrr/providers/step_provider.dart' as globalSteps;
 import 'package:walkerrr/providers/user_provider.dart';
-// import 'package:walkerrr/pages/steps_main_page.dart' as SecondPedometer;
 import 'package:walkerrr/services/api_connection.dart';
 
 import 'dart:async';
@@ -146,7 +145,7 @@ class _QuestListState extends State<QuestList>
                 questOffset: findOffset("Walk 50 Steps"),
                 questCurrent: getCurrent("Walk 50 Steps"),
                 questStart: startTime("Walk 50 Steps"),
-                reward: 400,
+                reward: 500,
                 isActive: false,
                 completed: false,
               ),

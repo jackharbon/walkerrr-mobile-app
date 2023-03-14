@@ -5,7 +5,7 @@ const UserSchema = new Schema({
 	email: { type: String, required: true, unique: true, lowercase: true, minLength: 5 },
 	displayName: { type: String, required: true },
 	uid: { type: String, immutable: true, required: true, unique: true },
-	coins: { type: Number, required: true, default: 100 },
+	coins: { type: Number, required: true, default: 0 },
 	trophies: { type: Array, required: true, default: [] },
 	quests: { type: Array, required: true, default: [] },
 	equippedArmour: { type: String, default: 'basic' },

@@ -117,7 +117,7 @@ Future<void> patchCoins(uid, increment) async {
         'Accept': 'application/json'
       },
       body: jsonEncode({'coins': currentCoins + increment}));
-  // print('------- patchCoins on api_connection\n$currentCoins + $increment');
+  print('------- patchCoins on api_connection\n$currentCoins + $increment');
 }
 
 Future<void> patchTrophiesToDB(uid, newTrophy) async {
