@@ -93,7 +93,7 @@ class _QuestListState extends State<QuestList>
   }
 
   void onStepCount(StepCount event) {
-    print('----- onStepCount on steps_main_page:\n$event');
+    // print('----- onStepCount on steps_main_page:\n$event');
     if (mounted)
       setState(() {
         steps = event.steps.toString();
@@ -102,22 +102,22 @@ class _QuestListState extends State<QuestList>
   }
 
   void onPedestrianStatusChanged(PedestrianStatus event) {
-    print('----- onPedestrianStatusChanged on steps_main_page:\n$event.status');
+    // print('----- onPedestrianStatusChanged on steps_main_page:\n$event.status');
     setState(() {
       status = event.status;
     });
-    print('---- onPedestrianStatusChanged status on steps_main_page:\n$status');
+    // print('---- onPedestrianStatusChanged status on steps_main_page:\n$status');
   }
 
   void onPedestrianStatusError(error) {
-    print('---- onPedestrianStatusError on steps_main_page:\n$error');
+    // print('---- onPedestrianStatusError on steps_main_page:\n$error');
     setState(() {
       status = 'Pedestrian Status not available';
     });
   }
 
   void onStepCountError(error) {
-    print('---- onStepCountError on steps_main_page:\n$error');
+    // print('---- onStepCountError on steps_main_page:\n$error');
     setState(() {
       // steps = 'Step Count not available';
       isStepCountAvailable = false;

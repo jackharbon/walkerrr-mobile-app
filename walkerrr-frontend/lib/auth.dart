@@ -39,7 +39,7 @@ class Auth {
       SecureStorage().setUserObject(userObject);
       await FirebaseAuth.instance.currentUser!.updateDisplayName(displayname);
     } catch (e) {
-      print(' --- createUser on auth error:\n$e');
+      // print(' --- createUser on auth error:\n$e');
     }
   }
 
@@ -50,7 +50,7 @@ class Auth {
       await SecureStorage().setUserObject({"null": "null"});
       await currentUser?.delete();
     } catch (e) {
-      print('---- deleteUser on auth error:\n$e');
+      // print('---- deleteUser on auth error:\n$e');
     }
   }
 

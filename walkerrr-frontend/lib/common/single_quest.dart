@@ -17,7 +17,7 @@ void checkCompletion(progress, currentQuest, reward) {
     patchCoins(userObject['uid'], reward);
     signOut();
   }
-  print('---- currentQuest on single_quest:\n$currentQuest');
+  // print('---- currentQuest on single_quest:\n$currentQuest');
 }
 
 class SingleQuest extends StatefulWidget {
@@ -139,8 +139,8 @@ class _SingleQuestState extends State<SingleQuest> {
       currentQuests = userObject["quests"];
       getUserFromDB(userObject['uid']);
       signOut();
-      print(
-          '---- startQuest - userObject["quests"] on single_quest:\n${userObject["quests"]}');
+      // print(
+      //     '---- startQuest - userObject["quests"] on single_quest:\n${userObject["quests"]}');
     }
 
     void claimQuest() {
@@ -148,13 +148,13 @@ class _SingleQuestState extends State<SingleQuest> {
       setState(() {
         isQuestClaimed = true;
       });
-      print(
-          '---- claimQuest on single_quest:\n$progress ${widget.questTitle} ${widget.reward}');
+      // print(
+      //     '---- claimQuest on single_quest:\n$progress ${widget.questTitle} ${widget.reward}');
     }
 
     void noAction() {
-      print(
-          '---- noAction Inactive button on single_quest pressed:\n$progress ${widget.questTitle}');
+      // print(
+      //     '---- noAction Inactive button on single_quest pressed:\n$progress ${widget.questTitle}');
     }
 
     return Padding(
