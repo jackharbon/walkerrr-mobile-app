@@ -82,12 +82,11 @@ class _QuestListState extends State<QuestList>
 
   void initPlatformState() {
     _pedestrianStatusStream = Pedometer.pedestrianStatusStream;
-    _pedestrianStatusStream
-        .listen(onPedestrianStatusChanged)
-        .onError(onPedestrianStatusError);
+    _pedestrianStatusStream.listen(onPedestrianStatusChanged);
+    // .onError(onPedestrianStatusError);
 
     _stepCountStream = Pedometer.stepCountStream;
-    _stepCountStream.listen(onStepCount).onError(onStepCountError);
+    // _stepCountStream.listen(onStepCount).onError(onStepCountError);
 
     if (!mounted) return;
   }
@@ -109,20 +108,20 @@ class _QuestListState extends State<QuestList>
     // print('---- onPedestrianStatusChanged status on steps_main_page:\n$status');
   }
 
-  void onPedestrianStatusError(error) {
-    // print('---- onPedestrianStatusError on steps_main_page:\n$error');
-    setState(() {
-      status = 'Pedestrian Status not available';
-    });
-  }
+  // void onPedestrianStatusError(error) {
+  //   // print('---- onPedestrianStatusError on steps_main_page:\n$error');
+  //   setState(() {
+  //     status = 'Pedestrian Status not available';
+  //   });
+  // }
 
-  void onStepCountError(error) {
-    // print('---- onStepCountError on steps_main_page:\n$error');
-    setState(() {
-      // steps = 'Step Count not available';
-      isStepCountAvailable = false;
-    });
-  }
+  // void onStepCountError(error) {
+  //   // print('---- onStepCountError on steps_main_page:\n$error');
+  //   setState(() {
+  //     // steps = 'Step Count not available';
+  //     isStepCountAvailable = false;
+  //   });
+  // }
 
   @override
   bool get wantKeepAlive => true;
